@@ -2,6 +2,8 @@
 import { ref, watchEffect, computed, watch, onMounted } from 'vue'
 import axios from 'axios'
 import { useRouter } from 'vue-router'
+import capitals from '../../assets/data/capitals.json'
+
 import BaseDashBoardCard from './BaseDashBoardCard.vue'
 import SearchBar from './SearchBar.vue'
 import WeatherCard from './WeatherCard.vue'
@@ -11,12 +13,7 @@ const router = useRouter()
 const searchQuery = ref('')
 const selectedCard = ref('')
 const isLoading = ref(false)
-
-const weatherList = ref([
-  { id: 'city_01', name: '서울', temp: 28, status: '맑음', humid: 10 },
-  { id: 'city_02', name: '수원', temp: 24, status: '비', humid: 70 },
-  { id: 'city_03', name: '부산', temp: 26, status: '구름', humid: 30 },
-])
+const weatherList = ref([])
 
 const filteredWeatherList = computed(() => {
   if (searchQuery.value === '') return weatherList.value
@@ -24,7 +21,7 @@ const filteredWeatherList = computed(() => {
   const dummyLs = []
 
   for (const ls of weatherList.value) {
-    if (ls.name == searchQuery.value) {
+    if (ls.nameKo == searchQuery.value) {
       dummyLs.push(ls)
     }
   }
@@ -32,27 +29,49 @@ const filteredWeatherList = computed(() => {
   return dummyLs
 })
 
-//라이프 사이클
+// 배열을 무작위로 섞는 함수 (Fisher-Yates shuffle)
+const shuffleArray = (array) => {
+  const result = [...array]
+  for (let i = result.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1))
+    ;[result[i], result[j]] = [result[j], result[i]]
+  }
+  return result
+}
+
+// 도시 이름으로 날씨 하나 가져오는 함수
+const fetchWeatherByName = async (capital) => {
+  const API_KEY = import.meta.env.VITE_WEATHER_API_KEY
+  const URL = `https://api.openweathermap.org/data/2.5/weather?q=${capital.nameEn},${capital.countryCode}&appid=${API_KEY}&units=metric&lang=kr`
+
+  const response = await axios.get(URL)
+  const data = response.data
+
+  return {
+    id: data.id,
+    nameKo: capital.nameKo, // 한글 이름
+    nameEn: capital.nameEn,
+    countryCode: capital.countryCode, // 국기 아이콘
+    temp: Math.round(data.main.temp), // 온도
+    status: data.weather[0].description, // 상태
+    humid: data.main.humidity, // 습도
+  }
+}
+
+// 라이프사이클
 onMounted(async () => {
   isLoading.value = true
-  const API_KEY = import.meta.env.VITE_WEATHER_API_KEY
-  console.log(`${API_KEY}`)
-  const URL = `https://api.openweathermap.org/data/2.5/weather?lat=35.158582&lon=126.804975&appid=${API_KEY}&units=metric&lang=kr`
+
+  const recommendedCapitals = shuffleArray(capitals).slice(0, 10)
+
   try {
-    // 비동기 통신: 서버에서 데이터를 다 가져올 때까지 await로 기다린다.
-    const response = await axios.get(URL)
-    // fetch()는 응답 String을 Json으로 변환해야 하지만(.json()) Axios에서는 응답 String(response.data)가 자동으로 JSON 파싱 됨.
-    console.log('Axios 통신 응답 전체 객체:', response)
-    console.log('백엔드가 준 핵심 날씨 데이터(JSON):', response.data)
-    weatherList.value.push({
-      id: response.data.name,
-      name: response.data.name,
-      temp: response.data.temp,
-      status: response.data.weather[0].description,
-      humid: response.data.main.humidity,
-    })
+    // 10개를 동시에 병렬 요청
+    const results = await Promise.all(
+      recommendedCapitals.map((capital) => fetchWeatherByName(capital)),
+    )
+
+    weatherList.value = results
   } catch (error) {
-    // 4xx, 5xx 에러나 네트워크 오프라인 시 자동으로 reject되어 catch 영역에서 처리 한다.
     console.error('통신 중 에러가 발생했습니다:', error)
     alert('데이터를 가져오지 못했습니다. API 키 활성화 여부나 주소를 확인하세요.')
   } finally {

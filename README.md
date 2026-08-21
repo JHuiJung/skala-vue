@@ -22,6 +22,10 @@
 - config 스토어 생성 및 화씨 섭씨 기능구현
 - UnitToggler : 버튼 누를씨 화씨 섭씨 변경
 
+###8.21 / 과제6 적용
+
+- Element Plus 적용후 el-button 생성 테스트
+
 ### 트러블 슈팅
 
 8/20

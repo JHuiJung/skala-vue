@@ -33,9 +33,10 @@ const displayTemp = computed(() => {
 })
 </script>
 <template>
-  <div @click="sendUpdateSelectCard(cityInfo.name)">
+  <div @click="sendUpdateSelectCard(cityInfo.nameKo)">
     <button @click.stop="sendMoveDetailView(cityInfo.id)">상세보기</button>
-    <p>{{ cityInfo.name }} ({{ cityInfo.status }})</p>
+    <img :src="`https://flagcdn.com/w40/${cityInfo.countryCode}.png`" :alt="cityInfo.nameKo" />
+    <p>{{ cityInfo.nameKo }} ({{ cityInfo.status }})</p>
     <p>현재 기온: {{ displayTemp }}{{ configStore.unitSymbol }}</p>
     <p>현재 습도: {{ cityInfo.humid }}%</p>
     <p v-if="cityInfo.temp >= 25" class="hot">🔥 더움 (25도 이상)</p>
