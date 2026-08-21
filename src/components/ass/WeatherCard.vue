@@ -1,47 +1,44 @@
 <script setup>
+import { useConfigStore } from '../../stores/config'
+import { computed } from 'vue'
+const configStore = useConfigStore()
+
 //props
-defineProps({
-  cityName: {
-    type: String,
-    required: true,
-  },
-
-  cityStatus: {
-    type: String,
-    required: true,
-  },
-
-  temp: {
-    type: Number,
-    required: true,
-  },
-
-  humid: {
-    type: Number,
+const props = defineProps({
+  cityInfo: {
+    type: Object,
     required: true,
   },
 })
 
 //emit
-const emit = defineEmits(['update-selected-card', 'alert-click-detail'])
+const emit = defineEmits(['update-selected-card', 'move-detail-view'])
 
 //emit 전달 함수
 const sendUpdateSelectCard = (cityName) => {
   emit('update-selected-card', cityName)
 }
 
-const sendAlertSelectCard = (cityName) => {
-  const msg = `${cityName}이 선택됨`
-  emit('alert-click-detail', msg)
+const sendMoveDetailView = (cityId) => {
+  emit('move-detail-view', cityId)
 }
+
+// 섭씨 화씨
+const displayTemp = computed(() => {
+  const rawTemp = props.cityInfo.temp // 기본 원본 데이터는 섭씨 숫자
+  if (configStore.unit === 'fahrenheit') {
+    return Math.round((rawTemp * 9) / 5 + 32) // 화씨 변환 연산
+  }
+  return rawTemp
+})
 </script>
 <template>
-  <div @click="sendUpdateSelectCard(cityName)">
-    <button @click.stop="sendAlertSelectCard(cityName)">상세보기</button>
-    <p>{{ cityName }} ({{ cityStatus }})</p>
-    <p>현재 기온: {{ temp }}C</p>
-    <p>현재 습도: {{ humid }}%</p>
-    <p v-if="temp >= 25" class="hot">🔥 더움 (25도 이상)</p>
+  <div @click="sendUpdateSelectCard(cityInfo.name)">
+    <button @click.stop="sendMoveDetailView(cityInfo.id)">상세보기</button>
+    <p>{{ cityInfo.name }} ({{ cityInfo.status }})</p>
+    <p>현재 기온: {{ displayTemp }}{{ configStore.unitSymbol }}</p>
+    <p>현재 습도: {{ cityInfo.humid }}%</p>
+    <p v-if="cityInfo.temp >= 25" class="hot">🔥 더움 (25도 이상)</p>
     <p v-else class="cold">🍃 선선함 (25도 이하)</p>
   </div>
 </template>

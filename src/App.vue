@@ -1,6 +1,15 @@
 <script setup>
-import WeatherParent from './components/ass/WeatherParent.vue'
+import { RouterLink, RouterView } from 'vue-router'
+import UnitToggler from './components/ass/UnitToggler.vue'
 </script>
 <template>
-  <weather-parent />
+  <header>
+    <nav>
+      <RouterLink to="/">Home</RouterLink>
+      <RouterLink to="/about">About</RouterLink>
+      <unit-toggler />
+    </nav>
+  </header>
+
+  <RouterView />
 </template>

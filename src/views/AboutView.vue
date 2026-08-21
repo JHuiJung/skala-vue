@@ -1,15 +1,15 @@
+<script setup>
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
+
+const backToMain = () => router.push('/')
+</script>
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+    <h1>상세 정보 페이지</h1>
+    <button @click="backToMain">메인 대시보드로 돌아가기</button>
   </div>
 </template>
 
-<style>
-@media (min-width: 1024px) {
-  .about {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-  }
-}
-</style>
+<style></style>

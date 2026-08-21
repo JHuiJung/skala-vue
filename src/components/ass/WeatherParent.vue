@@ -1,10 +1,12 @@
 <script setup>
 import { ref, watchEffect, computed, watch } from 'vue'
+import { useRouter } from 'vue-router'
 import BaseDashBoardCard from './BaseDashBoardCard.vue'
 import SearchBar from './SearchBar.vue'
 import WeatherCard from './WeatherCard.vue'
 
 // 변수
+const router = useRouter()
 const searchQuery = ref('')
 const selectedCard = ref('')
 
@@ -37,8 +39,8 @@ const handleUpdateSelectedCard = (card) => {
   selectedCard.value = card
 }
 
-const handleAlertSelectCard = (msg) => {
-  alert(msg)
+const handleMoveDetailView = (cityId) => {
+  router.push('/weather/' + cityId)
 }
 
 // watch, watchFX
@@ -63,12 +65,9 @@ watch(selectedCard, (newVal, oldVal) => {
     <WeatherCard
       v-for="cityInfo in filteredWeatherList"
       :key="cityInfo.id"
-      :city-name="cityInfo.name"
-      :city-status="cityInfo.status"
-      :temp="cityInfo.temp"
-      :humid="cityInfo.humid"
+      :city-info="cityInfo"
       @update-selected-card="handleUpdateSelectedCard"
-      @alert-click-detail="handleAlertSelectCard"
+      @move-detail-view="handleMoveDetailView"
     />
   </BaseDashBoardCard>
 
