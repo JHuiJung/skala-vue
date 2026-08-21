@@ -1,6 +1,6 @@
 <script setup>
-import ass_mockup from './components/ass/ass_mockup.vue'
+import WeatherParent from './components/ass/WeatherParent.vue'
 </script>
 <template>
-  <ass_mockup />
+  <weather-parent />
 </template>
