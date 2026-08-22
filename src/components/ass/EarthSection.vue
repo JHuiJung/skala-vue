@@ -3,10 +3,12 @@ import { ref, onMounted, onBeforeUnmount } from 'vue'
 import * as THREE from 'three'
 import axios from 'axios'
 import { useRouter } from 'vue-router'
+import { useSandwichStore } from '../../stores/sandwich'
 import earthTextureUrl from '../../assets/img/earth_day_4096.jpg'
 import WeatherCard from './WeatherCard.vue'
 
 const router = useRouter()
+const sandwichStore = useSandwichStore()
 const canvasContainer = ref(null)
 const selectedCityInfo = ref(null)
 
@@ -27,7 +29,8 @@ let renderer,
   targetLineMaterial,
   onPointerDown,
   onPointerMove,
-  onPointerUp
+  onPointerUp,
+  surfaceBreadMeshes
 
 // 모서리 4곳이 둥근 사각형 프로필 (빵 슬라이스 실루엣)
 const createRoundedRectShape = (width, height, radius) => {
@@ -46,6 +49,43 @@ const createRoundedRectShape = (width, height, radius) => {
   shape.quadraticCurveTo(-w, -h, -w + radius, -h)
 
   return shape
+}
+
+// 위도, 경도 -> 지구 로컬 좌표계 기준 단위구 표면 방향 벡터 (getLatLonUnderBread의 역변환)
+const latLonToLocalDirection = (lat, lon) => {
+  const theta = THREE.MathUtils.degToRad(90 - lat)
+  const phi = THREE.MathUtils.degToRad(lon + 180)
+  const ringRadius = Math.sin(theta)
+
+  return new THREE.Vector3(
+    -ringRadius * Math.cos(phi),
+    Math.cos(theta),
+    ringRadius * Math.sin(phi),
+  )
+}
+
+// 지구 표면에 눌러붙는 작은 빵 조각 (지구의 자식으로 붙여서 자전에 같이 따라감)
+const createSurfaceBread = (lat, lon, fillColor, borderColor) => {
+  const shape = createRoundedRectShape(0.09, 0.09, 0.02)
+  const geometry = new THREE.ExtrudeGeometry(shape, {
+    depth: 0.02,
+    bevelEnabled: false,
+    curveSegments: 8,
+  })
+  geometry.translate(0, 0, -0.01)
+
+  const material = [
+    new THREE.MeshPhongMaterial({ color: fillColor }),
+    new THREE.MeshPhongMaterial({ color: borderColor }),
+  ]
+
+  const mesh = new THREE.Mesh(geometry, material)
+  const direction = latLonToLocalDirection(lat, lon)
+  mesh.position.copy(direction).multiplyScalar(1.01)
+  mesh.quaternion.setFromUnitVectors(new THREE.Vector3(0, 0, 1), direction)
+
+  surfaceBreadMeshes.push({ mesh, geometry, material })
+  return mesh
 }
 
 // 빵이 가리키는 지점(월드 좌표 0,1,0)이 현재 지구 회전상 어느 위도/경도인지 계산
@@ -86,6 +126,8 @@ const handleMoveDetailView = (cityId) => {
 }
 
 onMounted(() => {
+  surfaceBreadMeshes = []
+
   const container = canvasContainer.value
   const width = container.clientWidth
   const height = container.clientHeight
@@ -129,6 +171,12 @@ onMounted(() => {
   bread.position.set(0, 1.3, 0)
   bread.rotation.x = Math.PI / 2
   scene.add(bread)
+
+  // 지금까지의 시도 기록을 지구 표면에 재현 - 시도할수록 지구가 빵으로 뒤덮임
+  sandwichStore.log.forEach((entry) => {
+    earth.add(createSurfaceBread(entry.selectedCity.lat, entry.selectedCity.lon, breadFillColor, breadBorderColor))
+    earth.add(createSurfaceBread(entry.oppositeCity.lat, entry.oppositeCity.lon, breadFillColor, breadBorderColor))
+  })
 
   // 빵 -> 지구 표면을 잇는 움직이는 점선 (지구에서도 선택할 수 있음을 보여주는 타겟팅 라인)
   const targetPoint = bread.position.clone().normalize()
@@ -211,6 +259,10 @@ onBeforeUnmount(() => {
   earthTexture?.dispose()
   breadGeometry?.dispose()
   breadMaterial?.forEach((material) => material.dispose())
+  surfaceBreadMeshes?.forEach(({ geometry, material }) => {
+    geometry.dispose()
+    material.forEach((m) => m.dispose())
+  })
   targetLineGeometry?.dispose()
   targetLineMaterial?.dispose()
   renderer?.dispose()
