@@ -3,6 +3,7 @@ import { ref, onMounted } from 'vue'
 import axios from 'axios'
 import { useRoute } from 'vue-router'
 import { useSandwichStore } from '../../stores/sandwich'
+import { BreadState, getBreadState } from '../../constants/breadState'
 import WeatherDetailResultCard from './WeatherDetailResultCard.vue'
 
 const route = useRoute()
@@ -65,6 +66,14 @@ onMounted(async () => {
       oppositeCity: oppositeCity.value,
     })
     sandwichStore.count++
+
+    // 승리 조건: 두 도시 모두 식빵 상태가 완벽일 때
+    if (
+      getBreadState(selectedCity.value) === BreadState.PERFECT &&
+      getBreadState(oppositeCity.value) === BreadState.PERFECT
+    ) {
+      sandwichStore.gameClear = true
+    }
   } catch (error) {
     console.error('도시 정보를 가져오는 중 에러가 발생했습니다:', error)
     errorMessage.value = '도시 정보를 불러오지 못했습니다.'

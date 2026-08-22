@@ -17,12 +17,21 @@ const sendNotification = (newQuery) => {
 </script>
 
 <template>
-  <input
-    type="text"
-    :value="searchQuery"
-    @input="sendNotification($event.target.value)"
-    placeholder="검색할 도시 입력"
-  />
-  <p>검색 중인 도시:{{ searchQuery }}</p>
+  <div class="search-bar">
+    <h3>🔎 도시 검색</h3>
+    <input
+      type="text"
+      :value="searchQuery"
+      @input="sendNotification($event.target.value)"
+      placeholder="검색할 도시 입력"
+    />
+    <p>검색 중인 도시:{{ searchQuery }}</p>
+  </div>
 </template>
-<style scoped></style>
+<style scoped>
+.search-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+</style>

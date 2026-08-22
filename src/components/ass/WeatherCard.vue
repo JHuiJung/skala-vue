@@ -1,6 +1,7 @@
 <script setup>
 import { useConfigStore } from '../../stores/config'
 import { computed } from 'vue'
+import { getBreadState } from '../../constants/breadState'
 const configStore = useConfigStore()
 
 //props
@@ -31,16 +32,32 @@ const displayTemp = computed(() => {
   }
   return rawTemp
 })
+
+const breadState = computed(() => getBreadState(props.cityInfo))
 </script>
 <template>
-  <div @click="sendUpdateSelectCard(cityInfo.nameKo)">
+  <div class="weather-card" @click="sendUpdateSelectCard(cityInfo.nameKo)">
     <button @click.stop="sendMoveDetailView(cityInfo.id)">상세보기</button>
     <img :src="`https://flagcdn.com/w40/${cityInfo.countryCode}.png`" :alt="cityInfo.nameKo" />
     <p>{{ cityInfo.nameKo }} ({{ cityInfo.status }})</p>
+    <p class="bread-state">🍞 {{ breadState }}</p>
     <p>현재 기온: {{ displayTemp }}{{ configStore.unitSymbol }}</p>
     <p>현재 습도: {{ cityInfo.humid }}%</p>
     <p v-if="cityInfo.temp >= 25" class="hot">🔥 더움 (25도 이상)</p>
     <p v-else class="cold">🍃 선선함 (25도 이하)</p>
   </div>
 </template>
-<style scoped></style>
+<style scoped>
+.weather-card {
+  border: 2px solid var(--bread-border-color);
+  border-radius: 12px;
+  background-color: var(--bread-fill-color);
+  padding: 12px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.bread-state {
+  font-weight: bold;
+}
+</style>

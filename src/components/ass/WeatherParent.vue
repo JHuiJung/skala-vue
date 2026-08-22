@@ -5,12 +5,14 @@ import { useRouter } from 'vue-router'
 import cityRecomend from '../../assets/data/cityRecomend.json'
 import cities1000 from '../../assets/data/cities-1000.json'
 
+import { useSandwichStore } from '../../stores/sandwich'
 import BaseDashBoardCard from './BaseDashBoardCard.vue'
 import SearchBar from './SearchBar.vue'
 import WeatherCard from './WeatherCard.vue'
 
 // 변수
 const router = useRouter()
+const sandwichStore = useSandwichStore()
 const searchQuery = ref('')
 const selectedCard = ref('')
 const isLoading = ref(false)
@@ -130,7 +132,7 @@ watch(searchQuery, (newQuery) => {
 
     try {
       const results = await Promise.all(
-        matchedCities.slice(0, 12).map((city) => fetchWeatherByName(city)),
+        matchedCities.slice(0, 10).map((city) => fetchWeatherByName(city)),
       )
       if (currentToken === searchToken) {
         searchResultList.value = results
@@ -146,16 +148,20 @@ watch(searchQuery, (newQuery) => {
 })
 </script>
 <template>
+  <p v-if="sandwichStore.gameClear" class="game-clear">🎉 {{ sandwichStore.count }}번만에 승리!</p>
+  <p v-else>🥪 현재 시도 횟수: {{ sandwichStore.count }}</p>
+
   <BaseDashBoardCard>
-    <h3>🔎 도시 검색</h3>
     <SearchBar :search-query="searchQuery" @update-search-query="handleUpdateSearchQuery" />
   </BaseDashBoardCard>
 
   <BaseDashBoardCard>
     <h3>🏙️ 지역별 날씨 현황</h3>
+    <p v-if="selectedCard != ''">{{ selectedCard }}가 선택됨</p>
+    <p v-else>카드를 클릭하거나 검색해 보세요</p>
     <p v-if="isSearchNoMatch">매칭되는 도시가 없습니다</p>
     <p v-else-if="isSearchLoading">도시 검색중</p>
-    <template v-else>
+    <div v-else class="weather-grid">
       <WeatherCard
         v-for="cityInfo in displayWeatherList"
         :key="cityInfo.id"
@@ -163,10 +169,24 @@ watch(searchQuery, (newQuery) => {
         @update-selected-card="handleUpdateSelectedCard"
         @move-detail-view="handleMoveDetailView"
       />
-    </template>
+    </div>
   </BaseDashBoardCard>
-
-  <p v-if="selectedCard != ''">{{ selectedCard }}가 선택됨</p>
-  <p v-else>카드를 클릭하거나 검색해 보세요</p>
 </template>
-<style scoped></style>
+<style scoped>
+.game-clear {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.weather-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+}
+
+@media (max-width: 760px) {
+  .weather-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+</style>

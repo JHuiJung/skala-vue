@@ -1,6 +1,7 @@
 <script setup>
 import { useConfigStore } from '../../stores/config'
 import { computed } from 'vue'
+import { getBreadState } from '../../constants/breadState'
 const configStore = useConfigStore()
 
 const props = defineProps({
@@ -22,6 +23,8 @@ const displayTemp = computed(() => {
   }
   return rawTemp
 })
+
+const breadState = computed(() => getBreadState(props.cityInfo))
 </script>
 
 <template>
@@ -32,7 +35,8 @@ const displayTemp = computed(() => {
       :src="`https://flagcdn.com/w40/${cityInfo.countryCode}.png`"
       :alt="cityInfo.nameEn"
     />
-    <p>{{ cityInfo.nameEn || '이름 없는 지점 (바다일 가능성이 높음)' }}</p>
+    <p>{{ cityInfo.nameEn || '바다' }}</p>
+    <p class="bread-state">🍞 {{ breadState }}</p>
     <p>{{ displayTemp }}{{ configStore.unitSymbol }} / {{ cityInfo.status }}</p>
     <p>습도: {{ cityInfo.humid }}%</p>
     <p>위도 {{ cityInfo.lat }}, 경도 {{ cityInfo.lon }}</p>
@@ -46,5 +50,9 @@ const displayTemp = computed(() => {
   padding: 16px;
   min-width: 200px;
   text-align: center;
+}
+
+.bread-state {
+  font-weight: bold;
 }
 </style>

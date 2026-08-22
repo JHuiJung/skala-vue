@@ -3,7 +3,10 @@ import { useConfigStore } from '../../stores/config'
 
 const configStore = useConfigStore()
 </script>
+
 <template>
-  <p>날씨단위:{{ configStore.unitSymbol }}</p>
-  <button @click="configStore.toggleUnit">단위 변경</button>
+  <el-radio-group v-model="configStore.unit" size="small">
+    <el-radio-button value="celsius">C</el-radio-button>
+    <el-radio-button value="fahrenheit">F</el-radio-button>
+  </el-radio-group>
 </template>
