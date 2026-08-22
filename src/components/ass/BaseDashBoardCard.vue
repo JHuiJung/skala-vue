@@ -1,20 +1,20 @@
 <script setup></script>
 <template>
-  <el-card class="dashboard-card" shadow="hover">
+  <div class="dashboard-card">
     <slot>
       <p>아직 슬롯이 비어있다아아아아앗</p>
     </slot>
-  </el-card>
+  </div>
 </template>
 <style scoped>
 .dashboard-card {
   margin: 16px auto;
   max-width: 1200px;
-  border-color: var(--bread-border-color);
+  padding: 20px;
+  border: 1px solid var(--bread-border-color);
+  border-radius: 12px;
   background-color: var(--bread-fill-color);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   color: var(--bread-border-color);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
 }
 </style>

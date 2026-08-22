@@ -34,81 +34,123 @@ const displayTemp = computed(() => {
 })
 
 const breadState = computed(() => getBreadState(props.cityInfo))
-const isHot = computed(() => props.cityInfo.temp >= 25)
 </script>
 <template>
-  <el-card class="weather-card" shadow="hover" @click.stop="sendUpdateSelectCard(cityInfo.nameKo)">
-    <div class="card-header">
-      <img
-        v-if="cityInfo.countryCode"
-        class="flag-icon"
-        :src="`https://flagcdn.com/w40/${cityInfo.countryCode}.png`"
-        :alt="cityInfo.nameKo"
-      />
-      <span class="city-name">{{ cityInfo.nameKo }}</span>
+  <div class="weather-card" @click.stop="sendUpdateSelectCard(cityInfo.nameKo)">
+    <div class="weather-card-content">
+      <p v-if="cityInfo.countryCode" class="country-code">{{ cityInfo.countryCode }}</p>
+      <h3 class="city-row">
+        <img
+          v-if="cityInfo.countryCode"
+          class="flag-icon"
+          :src="`https://flagcdn.com/w40/${cityInfo.countryCode}.png`"
+          :alt="cityInfo.nameKo"
+        />
+        {{ cityInfo.nameKo }}
+      </h3>
+      <h1 class="temp">{{ displayTemp }}{{ configStore.unitSymbol }}</h1>
+      <p class="humid">습도 {{ cityInfo.humid }}%</p>
+      <p class="bread-state bread-tag">🍞 {{ breadState }}</p>
+      <button class="bread-btn" @click.stop="sendMoveDetailView(cityInfo.id)">상세 정보</button>
     </div>
-
-    <p class="status">{{ cityInfo.status }}</p>
-
-    <div class="tags">
-      <el-tag type="warning" effect="light">🍞 {{ breadState }}</el-tag>
-      <el-tag :type="isHot ? 'danger' : 'success'" effect="light">
-        {{ isHot ? '🔥 더움' : '🍃 선선함' }}
-      </el-tag>
-    </div>
-
-    <p class="metrics">
-      🌡️ {{ displayTemp }}{{ configStore.unitSymbol }} · 💧 {{ cityInfo.humid }}%
-    </p>
-
-    <el-button type="primary" size="small" @click.stop="sendMoveDetailView(cityInfo.id)">
-      상세보기
-    </el-button>
-  </el-card>
+  </div>
 </template>
 <style scoped>
 .weather-card {
-  width: 100%;
-  cursor: pointer;
-  text-align: center;
-  border: 3px solid var(--bread-border-color);
-  color: var(--bread-border-color);
-  background-color: var(--bread-fill-color);
+  position: relative; /* 자식 요소의 위치 기준점 설정 */
+  width: 90%;
+  aspect-ratio: 4 / 4.5;
+  padding: 0px 0px 10px 0px;
+  background-color: var(--bread-border-color);
   border-radius: 30px;
-  box-shadow: inset 0 0 0 5px var(--bread-crust-mid-color);
 }
 
-.card-header {
+.weather-card-content {
+  position: absolute; /* 부모 기준 절대 위치 설정 */
+  top: -5px;
+  left: -5px;
+  width: 100%;
+  height: 100%;
+  background-color: var(--bread-fill-color);
+  border: 5px solid var(--bread-border-color);
+  border-radius: 30px;
+  text-align: center;
+  color: var(--bread-border-color);
+
+  /* 박스 크기 계산 방식 변경 (테두리와 패딩 포함) */
+  box-sizing: border-box;
+  padding: 14px 10px 44px;
+
+  transition: top 0.2s ease, left 0.2s ease;
+  cursor: pointer;
+}
+
+.weather-card-content:hover {
+  top: -10px;
+  left: -10px;
+}
+
+.weather-card-content:active {
+  top: 0px;
+  left: 0px;
+}
+
+.country-code {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  margin: 0;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.city-row {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  margin-bottom: 6px;
+  gap: 6px;
+  margin: 10px 0 4px;
 }
 
 .flag-icon {
-  width: 32px;
-  height: 22px;
-  border-radius: 4px;
-  border: 1px solid var(--bread-border-color);
+  height: 1em;
+  width: auto;
+  border-radius: 2px;
 }
 
-.city-name {
-  font-weight: bold;
+.temp {
+  margin: 4px 0;
 }
 
-.status {
-  margin-bottom: 8px;
+.humid,
+.bread-state {
+  margin: 2px 0;
+  font-size: 0.9rem;
 }
 
-.tags {
-  display: flex;
-  justify-content: center;
-  gap: 6px;
-  margin-bottom: 8px;
+.bread-tag {
+  color: var(--bread-fill-color);
+  background-color: var(--bread-border-color);
+  border-radius: 15px;
+  display: inline-block;
+  padding: 5px 10px;
 }
 
-.metrics {
-  margin-bottom: 12px;
+.bread-btn {
+  color: var(--bread-fill-color);
+  background-color: var(--bread-border-color);
+  border-radius: 15px;
+  display: block;
+  padding: 5px 10px;
+
+  /* 위치 설정 */
+  position: absolute;
+  bottom: 5px; /* 바닥에서 5px 위로 띄움 */
+  left: 50%;
+  transform: translateX(-50%); /* 가로 중앙 정렬 */
+
+  border: none;
+  cursor: pointer;
 }
 </style>
