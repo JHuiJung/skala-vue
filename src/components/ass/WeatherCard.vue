@@ -34,30 +34,81 @@ const displayTemp = computed(() => {
 })
 
 const breadState = computed(() => getBreadState(props.cityInfo))
+const isHot = computed(() => props.cityInfo.temp >= 25)
 </script>
 <template>
-  <div class="weather-card" @click="sendUpdateSelectCard(cityInfo.nameKo)">
-    <button @click.stop="sendMoveDetailView(cityInfo.id)">상세보기</button>
-    <img :src="`https://flagcdn.com/w40/${cityInfo.countryCode}.png`" :alt="cityInfo.nameKo" />
-    <p>{{ cityInfo.nameKo }} ({{ cityInfo.status }})</p>
-    <p class="bread-state">🍞 {{ breadState }}</p>
-    <p>현재 기온: {{ displayTemp }}{{ configStore.unitSymbol }}</p>
-    <p>현재 습도: {{ cityInfo.humid }}%</p>
-    <p v-if="cityInfo.temp >= 25" class="hot">🔥 더움 (25도 이상)</p>
-    <p v-else class="cold">🍃 선선함 (25도 이하)</p>
-  </div>
+  <el-card class="weather-card" shadow="hover" @click.stop="sendUpdateSelectCard(cityInfo.nameKo)">
+    <div class="card-header">
+      <img
+        v-if="cityInfo.countryCode"
+        class="flag-icon"
+        :src="`https://flagcdn.com/w40/${cityInfo.countryCode}.png`"
+        :alt="cityInfo.nameKo"
+      />
+      <span class="city-name">{{ cityInfo.nameKo }}</span>
+    </div>
+
+    <p class="status">{{ cityInfo.status }}</p>
+
+    <div class="tags">
+      <el-tag type="warning" effect="light">🍞 {{ breadState }}</el-tag>
+      <el-tag :type="isHot ? 'danger' : 'success'" effect="light">
+        {{ isHot ? '🔥 더움' : '🍃 선선함' }}
+      </el-tag>
+    </div>
+
+    <p class="metrics">
+      🌡️ {{ displayTemp }}{{ configStore.unitSymbol }} · 💧 {{ cityInfo.humid }}%
+    </p>
+
+    <el-button type="primary" size="small" @click.stop="sendMoveDetailView(cityInfo.id)">
+      상세보기
+    </el-button>
+  </el-card>
 </template>
 <style scoped>
 .weather-card {
-  border: 2px solid var(--bread-border-color);
-  border-radius: 12px;
-  background-color: var(--bread-fill-color);
-  padding: 12px;
+  width: 100%;
   cursor: pointer;
   text-align: center;
+  border: 3px solid var(--bread-border-color);
+  color: var(--bread-border-color);
+  background-color: var(--bread-fill-color);
+  border-radius: 30px;
+  box-shadow: inset 0 0 0 5px var(--bread-crust-mid-color);
 }
 
-.bread-state {
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.flag-icon {
+  width: 32px;
+  height: 22px;
+  border-radius: 4px;
+  border: 1px solid var(--bread-border-color);
+}
+
+.city-name {
   font-weight: bold;
+}
+
+.status {
+  margin-bottom: 8px;
+}
+
+.tags {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+.metrics {
+  margin-bottom: 12px;
 }
 </style>

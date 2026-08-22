@@ -1,4 +1,6 @@
 <script setup>
+import { Search } from '@element-plus/icons-vue'
+
 //props
 defineProps({
   searchQuery: {
@@ -19,13 +21,19 @@ const sendNotification = (newQuery) => {
 <template>
   <div class="search-bar">
     <h3>🔎 도시 검색</h3>
-    <input
-      type="text"
-      :value="searchQuery"
-      @input="sendNotification($event.target.value)"
+    <el-input
+      :model-value="searchQuery"
       placeholder="검색할 도시 입력"
-    />
-    <p>검색 중인 도시:{{ searchQuery }}</p>
+      class="search-input"
+      clearable
+      @input="sendNotification"
+      @clear="sendNotification('')"
+    >
+      <template #prefix>
+        <el-icon><Search /></el-icon>
+      </template>
+    </el-input>
+    <p>검색 중인 도시: {{ searchQuery }}</p>
   </div>
 </template>
 <style scoped>
@@ -33,5 +41,9 @@ const sendNotification = (newQuery) => {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.search-input {
+  max-width: 300px;
 }
 </style>
