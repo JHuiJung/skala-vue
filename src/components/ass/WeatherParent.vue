@@ -2,7 +2,8 @@
 import { ref, watchEffect, computed, watch, onMounted } from 'vue'
 import axios from 'axios'
 import { useRouter } from 'vue-router'
-import capitals from '../../assets/data/capitals.json'
+import cityRecomend from '../../assets/data/cityRecomend.json'
+import cities1000 from '../../assets/data/cities-1000.json'
 
 import BaseDashBoardCard from './BaseDashBoardCard.vue'
 import SearchBar from './SearchBar.vue'
@@ -14,19 +15,15 @@ const searchQuery = ref('')
 const selectedCard = ref('')
 const isLoading = ref(false)
 const weatherList = ref([])
+const searchResultList = ref([])
+const isSearchNoMatch = ref(false)
+const isSearchLoading = ref(false)
 
-const filteredWeatherList = computed(() => {
+const cityDatabase = [...cityRecomend, ...cities1000]
+
+const displayWeatherList = computed(() => {
   if (searchQuery.value === '') return weatherList.value
-
-  const dummyLs = []
-
-  for (const ls of weatherList.value) {
-    if (ls.nameKo == searchQuery.value) {
-      dummyLs.push(ls)
-    }
-  }
-
-  return dummyLs
+  return searchResultList.value
 })
 
 // 배열을 무작위로 섞는 함수 (Fisher-Yates shuffle)
@@ -62,7 +59,7 @@ const fetchWeatherByName = async (capital) => {
 onMounted(async () => {
   isLoading.value = true
 
-  const recommendedCapitals = shuffleArray(capitals).slice(0, 10)
+  const recommendedCapitals = shuffleArray(cityRecomend).slice(0, 10)
 
   try {
     // 10개를 동시에 병렬 요청
@@ -102,6 +99,51 @@ watchEffect(() => {
 watch(selectedCard, (newVal, oldVal) => {
   console.log(`🤖 [watch자동 호출] 선택된 도시가[${oldVal}]에서 [${newVal}]로 변경되었습니다`)
 })
+
+// 검색어로 도시 매칭 후 날씨 조회
+let searchTimer = null
+let searchToken = 0
+
+watch(searchQuery, (newQuery) => {
+  clearTimeout(searchTimer)
+
+  if (newQuery === '') {
+    searchResultList.value = []
+    isSearchNoMatch.value = false
+    isSearchLoading.value = false
+    return
+  }
+
+  isSearchNoMatch.value = false
+  isSearchLoading.value = true
+
+  searchTimer = setTimeout(async () => {
+    const currentToken = ++searchToken
+    const matchedCities = cityDatabase.filter((city) => city.nameKo.includes(newQuery))
+
+    if (matchedCities.length === 0) {
+      searchResultList.value = []
+      isSearchNoMatch.value = true
+      isSearchLoading.value = false
+      return
+    }
+
+    try {
+      const results = await Promise.all(
+        matchedCities.slice(0, 12).map((city) => fetchWeatherByName(city)),
+      )
+      if (currentToken === searchToken) {
+        searchResultList.value = results
+      }
+    } catch (error) {
+      console.error('검색 중 에러가 발생했습니다:', error)
+    } finally {
+      if (currentToken === searchToken) {
+        isSearchLoading.value = false
+      }
+    }
+  }, 400)
+})
 </script>
 <template>
   <BaseDashBoardCard>
@@ -111,13 +153,17 @@ watch(selectedCard, (newVal, oldVal) => {
 
   <BaseDashBoardCard>
     <h3>🏙️ 지역별 날씨 현황</h3>
-    <WeatherCard
-      v-for="cityInfo in filteredWeatherList"
-      :key="cityInfo.id"
-      :city-info="cityInfo"
-      @update-selected-card="handleUpdateSelectedCard"
-      @move-detail-view="handleMoveDetailView"
-    />
+    <p v-if="isSearchNoMatch">매칭되는 도시가 없습니다</p>
+    <p v-else-if="isSearchLoading">도시 검색중</p>
+    <template v-else>
+      <WeatherCard
+        v-for="cityInfo in displayWeatherList"
+        :key="cityInfo.id"
+        :city-info="cityInfo"
+        @update-selected-card="handleUpdateSelectedCard"
+        @move-detail-view="handleMoveDetailView"
+      />
+    </template>
   </BaseDashBoardCard>
 
   <p v-if="selectedCard != ''">{{ selectedCard }}가 선택됨</p>

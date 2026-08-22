@@ -1,0 +1,4197 @@
+[
+  {
+    "nameEn": "Shanghai",
+    "nameKo": "상하이",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Istanbul",
+    "nameKo": "이스탄불",
+    "countryCode": "tr"
+  },
+  {
+    "nameEn": "Mumbai",
+    "nameKo": "뭄바이",
+    "countryCode": "in"
+  },
+  {
+    "nameEn": "Karachi",
+    "nameKo": "카라치",
+    "countryCode": "pk"
+  },
+  {
+    "nameEn": "Tianjin",
+    "nameKo": "톈진",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Guangzhou",
+    "nameKo": "광저우",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Delhi",
+    "nameKo": "델리",
+    "countryCode": "in"
+  },
+  {
+    "nameEn": "Shenzhen",
+    "nameKo": "선전",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Sao Paulo",
+    "nameKo": "상파울루",
+    "countryCode": "br"
+  },
+  {
+    "nameEn": "Wuhan",
+    "nameKo": "우한",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Lagos",
+    "nameKo": "라고스",
+    "countryCode": "ng"
+  },
+  {
+    "nameEn": "New York City",
+    "nameKo": "뉴욕시",
+    "countryCode": "us"
+  },
+  {
+    "nameEn": "Dongguan",
+    "nameKo": "둥관",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Chongqing",
+    "nameKo": "충칭",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Chengdu",
+    "nameKo": "청두",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Nanjing",
+    "nameKo": "난징",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Nanchong",
+    "nameKo": "난충",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Hong Kong",
+    "nameKo": "홍콩",
+    "countryCode": "hk"
+  },
+  {
+    "nameEn": "Xi'an",
+    "nameKo": "시안",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Lahore",
+    "nameKo": "라호르",
+    "countryCode": "pk"
+  },
+  {
+    "nameEn": "Shenyang",
+    "nameKo": "선양",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Hangzhou",
+    "nameKo": "항저우",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Rio de Janeiro",
+    "nameKo": "리우데자네이루",
+    "countryCode": "br"
+  },
+  {
+    "nameEn": "Harbin",
+    "nameKo": "하얼빈",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Tai'an",
+    "nameKo": "타이안",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Suzhou",
+    "nameKo": "쑤저우",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Shantou",
+    "nameKo": "산터우",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Bengaluru",
+    "nameKo": "벵갈루루",
+    "countryCode": "in"
+  },
+  {
+    "nameEn": "Saint Petersburg",
+    "nameKo": "상트페테르부르크",
+    "countryCode": "ru"
+  },
+  {
+    "nameEn": "Kolkata",
+    "nameKo": "콜카타",
+    "countryCode": "in"
+  },
+  {
+    "nameEn": "Sydney",
+    "nameKo": "시드니",
+    "countryCode": "au"
+  },
+  {
+    "nameEn": "Yangon",
+    "nameKo": "양곤",
+    "countryCode": "mm"
+  },
+  {
+    "nameEn": "Jinan",
+    "nameKo": "지난",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Chennai",
+    "nameKo": "첸나이",
+    "countryCode": "in"
+  },
+  {
+    "nameEn": "Zhengzhou",
+    "nameKo": "정저우",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Melbourne",
+    "nameKo": "멜버른",
+    "countryCode": "au"
+  },
+  {
+    "nameEn": "Changchun",
+    "nameKo": "창춘",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Dalian",
+    "nameKo": "다롄",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Los Angeles",
+    "nameKo": "로스앤젤레스",
+    "countryCode": "us"
+  },
+  {
+    "nameEn": "Kunming",
+    "nameKo": "쿤밍",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Alexandria",
+    "nameKo": "알렉산드리아",
+    "countryCode": "eg"
+  },
+  {
+    "nameEn": "Ahmedabad",
+    "nameKo": "아마다바드",
+    "countryCode": "in"
+  },
+  {
+    "nameEn": "Qingdao",
+    "nameKo": "칭다오",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Abidjan",
+    "nameKo": "아비장",
+    "countryCode": "ci"
+  },
+  {
+    "nameEn": "Kano",
+    "nameKo": "카노",
+    "countryCode": "ng"
+  },
+  {
+    "nameEn": "Foshan",
+    "nameKo": "포산",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Hyderabad",
+    "nameKo": "하이데라바드",
+    "countryCode": "in"
+  },
+  {
+    "nameEn": "Puyang",
+    "nameKo": "푸양",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Yokohama",
+    "nameKo": "요코하마",
+    "countryCode": "jp"
+  },
+  {
+    "nameEn": "Ibadan",
+    "nameKo": "이바단",
+    "countryCode": "ng"
+  },
+  {
+    "nameEn": "Wuxi",
+    "nameKo": "우시",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Xiamen",
+    "nameKo": "샤먼",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Tianshui",
+    "nameKo": "톈수이",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Ningbo",
+    "nameKo": "닝보",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Ho Chi Minh City",
+    "nameKo": "호치민",
+    "countryCode": "vn"
+  },
+  {
+    "nameEn": "Shiyan",
+    "nameKo": "스옌",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Cape Town",
+    "nameKo": "케이프타운",
+    "countryCode": "za"
+  },
+  {
+    "nameEn": "Taiyuan",
+    "nameKo": "타이위안",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Tangshan",
+    "nameKo": "탕산",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Hefei",
+    "nameKo": "허페이",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Casablanca",
+    "nameKo": "카사블랑카",
+    "countryCode": "ma"
+  },
+  {
+    "nameEn": "Zibo",
+    "nameKo": "쯔보",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Zhongshan",
+    "nameKo": "중산",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Durban",
+    "nameKo": "더반",
+    "countryCode": "za"
+  },
+  {
+    "nameEn": "Changsha",
+    "nameKo": "창사",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Urumqi",
+    "nameKo": "우루무치",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Dubai",
+    "nameKo": "두바이",
+    "countryCode": "ae"
+  },
+  {
+    "nameEn": "Pune",
+    "nameKo": "푸네",
+    "countryCode": "in"
+  },
+  {
+    "nameEn": "Surat",
+    "nameKo": "수라트",
+    "countryCode": "in"
+  },
+  {
+    "nameEn": "Jeddah",
+    "nameKo": "제다",
+    "countryCode": "sa"
+  },
+  {
+    "nameEn": "Shijiazhuang",
+    "nameKo": "스자좡",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Kanpur",
+    "nameKo": "칸푸르",
+    "countryCode": "in"
+  },
+  {
+    "nameEn": "Quezon City",
+    "nameKo": "퀘존시",
+    "countryCode": "ph"
+  },
+  {
+    "nameEn": "Chicago",
+    "nameKo": "시카고",
+    "countryCode": "us"
+  },
+  {
+    "nameEn": "Salvador",
+    "nameKo": "사우바도르",
+    "countryCode": "br"
+  },
+  {
+    "nameEn": "Jaipur",
+    "nameKo": "자이푸르",
+    "countryCode": "in"
+  },
+  {
+    "nameEn": "Dar es Salaam",
+    "nameKo": "다르에스살람",
+    "countryCode": "tz"
+  },
+  {
+    "nameEn": "Lanzhou",
+    "nameKo": "란저우",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Yunfu",
+    "nameKo": "윈푸",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Toronto",
+    "nameKo": "토론토",
+    "countryCode": "ca"
+  },
+  {
+    "nameEn": "Navi Mumbai",
+    "nameKo": "나비뭄바이",
+    "countryCode": "in"
+  },
+  {
+    "nameEn": "Basrah",
+    "nameKo": "바스라",
+    "countryCode": "iq"
+  },
+  {
+    "nameEn": "Osaka",
+    "nameKo": "오사카",
+    "countryCode": "jp"
+  },
+  {
+    "nameEn": "Faisalabad",
+    "nameKo": "파이살라바드",
+    "countryCode": "pk"
+  },
+  {
+    "nameEn": "Izmir",
+    "nameKo": "이즈미르",
+    "countryCode": "tr"
+  },
+  {
+    "nameEn": "Lucknow",
+    "nameKo": "러크나우",
+    "countryCode": "in"
+  },
+  {
+    "nameEn": "Giza",
+    "nameKo": "기자",
+    "countryCode": "eg"
+  },
+  {
+    "nameEn": "Fortaleza",
+    "nameKo": "포르탈레자",
+    "countryCode": "br"
+  },
+  {
+    "nameEn": "Cali",
+    "nameKo": "칼리",
+    "countryCode": "co"
+  },
+  {
+    "nameEn": "Surabaya",
+    "nameKo": "수라바야",
+    "countryCode": "id"
+  },
+  {
+    "nameEn": "Belo Horizonte",
+    "nameKo": "벨루오리존치",
+    "countryCode": "br"
+  },
+  {
+    "nameEn": "Nanchang",
+    "nameKo": "난창",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Mashhad",
+    "nameKo": "마슈하드",
+    "countryCode": "ir"
+  },
+  {
+    "nameEn": "Brooklyn",
+    "nameKo": "브루클린",
+    "countryCode": "us"
+  },
+  {
+    "nameEn": "Houston",
+    "nameKo": "휴스턴",
+    "countryCode": "us"
+  },
+  {
+    "nameEn": "Queens",
+    "nameKo": "퀸스",
+    "countryCode": "us"
+  },
+  {
+    "nameEn": "Nagpur",
+    "nameKo": "나그푸르",
+    "countryCode": "in"
+  },
+  {
+    "nameEn": "Maracaibo",
+    "nameKo": "마라카이보",
+    "countryCode": "ve"
+  },
+  {
+    "nameEn": "Nagoya",
+    "nameKo": "나고야",
+    "countryCode": "jp"
+  },
+  {
+    "nameEn": "Brisbane",
+    "nameKo": "브리즈번",
+    "countryCode": "au"
+  },
+  {
+    "nameEn": "Al Mawsil al Jadidah",
+    "nameKo": "알마우실알자디다",
+    "countryCode": "iq"
+  },
+  {
+    "nameEn": "Johannesburg",
+    "nameKo": "요하네스버그",
+    "countryCode": "za"
+  },
+  {
+    "nameEn": "Kowloon",
+    "nameKo": "구룡",
+    "countryCode": "hk"
+  },
+  {
+    "nameEn": "Al Basrah al Qadimah",
+    "nameKo": "알바스라알카디마",
+    "countryCode": "iq"
+  },
+  {
+    "nameEn": "Almaty",
+    "nameKo": "알마티",
+    "countryCode": "kz"
+  },
+  {
+    "nameEn": "Medellin",
+    "nameKo": "메데인",
+    "countryCode": "co"
+  },
+  {
+    "nameEn": "Guayaquil",
+    "nameKo": "과야킬",
+    "countryCode": "ec"
+  },
+  {
+    "nameEn": "Perth",
+    "nameKo": "퍼스",
+    "countryCode": "au"
+  },
+  {
+    "nameEn": "Sapporo",
+    "nameKo": "삿포로",
+    "countryCode": "jp"
+  },
+  {
+    "nameEn": "Jilin",
+    "nameKo": "지린",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Camayenne",
+    "nameKo": "카마옌",
+    "countryCode": "gn"
+  },
+  {
+    "nameEn": "Indore",
+    "nameKo": "인도르",
+    "countryCode": "in"
+  },
+  {
+    "nameEn": "Iztapalapa",
+    "nameKo": "이스타팔라파",
+    "countryCode": "mx"
+  },
+  {
+    "nameEn": "Maracay",
+    "nameKo": "마라카이",
+    "countryCode": "ve"
+  },
+  {
+    "nameEn": "Medan",
+    "nameKo": "메단",
+    "countryCode": "id"
+  },
+  {
+    "nameEn": "Rawalpindi",
+    "nameKo": "라왈핀디",
+    "countryCode": "pk"
+  },
+  {
+    "nameEn": "Mosul",
+    "nameKo": "모술",
+    "countryCode": "iq"
+  },
+  {
+    "nameEn": "Hamburg",
+    "nameKo": "함부르크",
+    "countryCode": "de"
+  },
+  {
+    "nameEn": "Curitiba",
+    "nameKo": "쿠리치바",
+    "countryCode": "br"
+  },
+  {
+    "nameEn": "Bandung",
+    "nameKo": "반둥",
+    "countryCode": "id"
+  },
+  {
+    "nameEn": "Soweto",
+    "nameKo": "소웨토",
+    "countryCode": "za"
+  },
+  {
+    "nameEn": "Ecatepec de Morelos",
+    "nameKo": "에카테펙데모렐로스",
+    "countryCode": "mx"
+  },
+  {
+    "nameEn": "Barcelona",
+    "nameKo": "바르셀로나",
+    "countryCode": "es"
+  },
+  {
+    "nameEn": "Aleppo",
+    "nameKo": "알레포",
+    "countryCode": "sy"
+  },
+  {
+    "nameEn": "Montreal",
+    "nameKo": "몬트리올",
+    "countryCode": "ca"
+  },
+  {
+    "nameEn": "Kunshan",
+    "nameKo": "쿤산",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Patna",
+    "nameKo": "파트나",
+    "countryCode": "in"
+  },
+  {
+    "nameEn": "Bhopal",
+    "nameKo": "보팔",
+    "countryCode": "in"
+  },
+  {
+    "nameEn": "Manaus",
+    "nameKo": "마나우스",
+    "countryCode": "br"
+  },
+  {
+    "nameEn": "Xinyang",
+    "nameKo": "신양",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Kaduna",
+    "nameKo": "카두나",
+    "countryCode": "ng"
+  },
+  {
+    "nameEn": "Philadelphia",
+    "nameKo": "필라델피아",
+    "countryCode": "us"
+  },
+  {
+    "nameEn": "Phoenix",
+    "nameKo": "피닉스",
+    "countryCode": "us"
+  },
+  {
+    "nameEn": "Isfahan",
+    "nameKo": "이스파한",
+    "countryCode": "ir"
+  },
+  {
+    "nameEn": "Ludhiana",
+    "nameKo": "루디아나",
+    "countryCode": "in"
+  },
+  {
+    "nameEn": "Kobe",
+    "nameKo": "고베",
+    "countryCode": "jp"
+  },
+  {
+    "nameEn": "Bekasi",
+    "nameKo": "브카시",
+    "countryCode": "id"
+  },
+  {
+    "nameEn": "Kaohsiung",
+    "nameKo": "가오슝",
+    "countryCode": "tw"
+  },
+  {
+    "nameEn": "Caloocan City",
+    "nameKo": "칼루칸시",
+    "countryCode": "ph"
+  },
+  {
+    "nameEn": "Guadalajara",
+    "nameKo": "과달라하라",
+    "countryCode": "mx"
+  },
+  {
+    "nameEn": "Manhattan",
+    "nameKo": "맨해튼",
+    "countryCode": "us"
+  },
+  {
+    "nameEn": "Recife",
+    "nameKo": "헤시피",
+    "countryCode": "br"
+  },
+  {
+    "nameEn": "San Antonio",
+    "nameKo": "샌안토니오",
+    "countryCode": "us"
+  },
+  {
+    "nameEn": "Kumasi",
+    "nameKo": "쿠마시",
+    "countryCode": "gh"
+  },
+  {
+    "nameEn": "Kota Bharu",
+    "nameKo": "코타바루",
+    "countryCode": "my"
+  },
+  {
+    "nameEn": "Kyoto",
+    "nameKo": "교토",
+    "countryCode": "jp"
+  },
+  {
+    "nameEn": "Karaj",
+    "nameKo": "카라지",
+    "countryCode": "ir"
+  },
+  {
+    "nameEn": "Palembang",
+    "nameKo": "팔렘방",
+    "countryCode": "id"
+  },
+  {
+    "nameEn": "Multan",
+    "nameKo": "물탄",
+    "countryCode": "pk"
+  },
+  {
+    "nameEn": "Tirunelveli",
+    "nameKo": "티루넬벨리",
+    "countryCode": "in"
+  },
+  {
+    "nameEn": "Puebla",
+    "nameKo": "푸에블라",
+    "countryCode": "mx"
+  },
+  {
+    "nameEn": "Kharkiv",
+    "nameKo": "하르키우",
+    "countryCode": "ua"
+  },
+  {
+    "nameEn": "Agra",
+    "nameKo": "아그라",
+    "countryCode": "in"
+  },
+  {
+    "nameEn": "Cordoba",
+    "nameKo": "코르도바",
+    "countryCode": "ar"
+  },
+  {
+    "nameEn": "Tabriz",
+    "nameKo": "타브리즈",
+    "countryCode": "ir"
+  },
+  {
+    "nameEn": "Novosibirsk",
+    "nameKo": "노보시비르스크",
+    "countryCode": "ru"
+  },
+  {
+    "nameEn": "Bursa",
+    "nameKo": "부르사",
+    "countryCode": "tr"
+  },
+  {
+    "nameEn": "Vadodara",
+    "nameKo": "바도다라",
+    "countryCode": "in"
+  },
+  {
+    "nameEn": "Belem",
+    "nameKo": "벨렝",
+    "countryCode": "br"
+  },
+  {
+    "nameEn": "Fushun",
+    "nameKo": "푸순",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "San Diego",
+    "nameKo": "샌디에이고",
+    "countryCode": "us"
+  },
+  {
+    "nameEn": "Fukuoka",
+    "nameKo": "후쿠오카",
+    "countryCode": "jp"
+  },
+  {
+    "nameEn": "Luoyang",
+    "nameKo": "뤄양",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Hyderabad",
+    "nameKo": "하이데라바드",
+    "countryCode": "pk"
+  },
+  {
+    "nameEn": "The Bronx",
+    "nameKo": "브롱크스",
+    "countryCode": "us"
+  },
+  {
+    "nameEn": "Valencia",
+    "nameKo": "발렌시아",
+    "countryCode": "ve"
+  },
+  {
+    "nameEn": "Gujranwala",
+    "nameKo": "구즈란왈라",
+    "countryCode": "pk"
+  },
+  {
+    "nameEn": "Barranquilla",
+    "nameKo": "바랑키야",
+    "countryCode": "co"
+  },
+  {
+    "nameEn": "Guankou",
+    "nameKo": "관커우",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Lubumbashi",
+    "nameKo": "루붐바시",
+    "countryCode": "cd"
+  },
+  {
+    "nameEn": "Porto Alegre",
+    "nameKo": "포르투알레그리",
+    "countryCode": "br"
+  },
+  {
+    "nameEn": "Tangerang",
+    "nameKo": "탕에랑",
+    "countryCode": "id"
+  },
+  {
+    "nameEn": "Najafgarh",
+    "nameKo": "나자프가르",
+    "countryCode": "in"
+  },
+  {
+    "nameEn": "Santa Cruz de la Sierra",
+    "nameKo": "산타크루스데라시에라",
+    "countryCode": "bo"
+  },
+  {
+    "nameEn": "Handan",
+    "nameKo": "한단",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Yekaterinburg",
+    "nameKo": "예카테린부르크",
+    "countryCode": "ru"
+  },
+  {
+    "nameEn": "Yinchuan",
+    "nameKo": "인촨",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Khulna",
+    "nameKo": "쿨나",
+    "countryCode": "bd"
+  },
+  {
+    "nameEn": "Douala",
+    "nameKo": "두알라",
+    "countryCode": "cm"
+  },
+  {
+    "nameEn": "Gorakhpur",
+    "nameKo": "고라크푸르",
+    "countryCode": "in"
+  },
+  {
+    "nameEn": "Sharjah",
+    "nameKo": "샤르자",
+    "countryCode": "ae"
+  },
+  {
+    "nameEn": "Mecca",
+    "nameKo": "메카",
+    "countryCode": "sa"
+  },
+  {
+    "nameEn": "Makassar",
+    "nameKo": "마카사르",
+    "countryCode": "id"
+  },
+  {
+    "nameEn": "Ciudad Juarez",
+    "nameKo": "시우다드후아레스",
+    "countryCode": "mx"
+  },
+  {
+    "nameEn": "Kawasaki",
+    "nameKo": "가와사키",
+    "countryCode": "jp"
+  },
+  {
+    "nameEn": "Baotou",
+    "nameKo": "바오터우",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Tijuana",
+    "nameKo": "티후아나",
+    "countryCode": "mx"
+  },
+  {
+    "nameEn": "Dallas",
+    "nameKo": "댈러스",
+    "countryCode": "us"
+  },
+  {
+    "nameEn": "Medina",
+    "nameKo": "메디나",
+    "countryCode": "sa"
+  },
+  {
+    "nameEn": "Nashik",
+    "nameKo": "나시크",
+    "countryCode": "in"
+  },
+  {
+    "nameEn": "Semarang",
+    "nameKo": "스마랑",
+    "countryCode": "id"
+  },
+  {
+    "nameEn": "Pimpri",
+    "nameKo": "핌프리",
+    "countryCode": "in"
+  },
+  {
+    "nameEn": "Nizhniy Novgorod",
+    "nameKo": "니즈니노브고로드",
+    "countryCode": "ru"
+  },
+  {
+    "nameEn": "Budta",
+    "nameKo": "부드타",
+    "countryCode": "ph"
+  },
+  {
+    "nameEn": "Xuchang",
+    "nameKo": "쉬창",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Kalyan",
+    "nameKo": "칼리안",
+    "countryCode": "in"
+  },
+  {
+    "nameEn": "Thane",
+    "nameKo": "타네",
+    "countryCode": "in"
+  },
+  {
+    "nameEn": "Munich",
+    "nameKo": "뮌헨",
+    "countryCode": "de"
+  },
+  {
+    "nameEn": "Xuzhou",
+    "nameKo": "쉬저우",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Ra's Bayrut",
+    "nameKo": "라스베이루트",
+    "countryCode": "lb"
+  },
+  {
+    "nameEn": "Shiraz",
+    "nameKo": "시라즈",
+    "countryCode": "ir"
+  },
+  {
+    "nameEn": "Adana",
+    "nameKo": "아다나",
+    "countryCode": "tr"
+  },
+  {
+    "nameEn": "Leon de los Aldama",
+    "nameKo": "레온데로스알다마",
+    "countryCode": "mx"
+  },
+  {
+    "nameEn": "Milan",
+    "nameKo": "밀라노",
+    "countryCode": "it"
+  },
+  {
+    "nameEn": "Adelaide",
+    "nameKo": "애들레이드",
+    "countryCode": "au"
+  },
+  {
+    "nameEn": "Meerut",
+    "nameKo": "미루트",
+    "countryCode": "in"
+  },
+  {
+    "nameEn": "Faridabad",
+    "nameKo": "파리다바드",
+    "countryCode": "in"
+  },
+  {
+    "nameEn": "Peshawar",
+    "nameKo": "페샤와르",
+    "countryCode": "pk"
+  },
+  {
+    "nameEn": "Davao",
+    "nameKo": "다바오",
+    "countryCode": "ph"
+  },
+  {
+    "nameEn": "Mandalay",
+    "nameKo": "만달레이",
+    "countryCode": "mm"
+  },
+  {
+    "nameEn": "Yueyang",
+    "nameKo": "웨양",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Santiago de los Caballeros",
+    "nameKo": "산티아고데로스카바예로스",
+    "countryCode": "do"
+  },
+  {
+    "nameEn": "Omdurman",
+    "nameKo": "옴두르만",
+    "countryCode": "sd"
+  },
+  {
+    "nameEn": "Anshan",
+    "nameKo": "안산",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Ghaziabad",
+    "nameKo": "가지아바드",
+    "countryCode": "in"
+  },
+  {
+    "nameEn": "Depok",
+    "nameKo": "데포크",
+    "countryCode": "id"
+  },
+  {
+    "nameEn": "Saitama",
+    "nameKo": "사이타마",
+    "countryCode": "jp"
+  },
+  {
+    "nameEn": "Dombivli",
+    "nameKo": "돔비블리",
+    "countryCode": "in"
+  },
+  {
+    "nameEn": "Gustavo Adolfo Madero",
+    "nameKo": "구스타보아돌포마데로",
+    "countryCode": "mx"
+  },
+  {
+    "nameEn": "Fuzhou",
+    "nameKo": "푸저우",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Rajkot",
+    "nameKo": "라지코트",
+    "countryCode": "in"
+  },
+  {
+    "nameEn": "Rosario",
+    "nameKo": "로사리오",
+    "countryCode": "ar"
+  },
+  {
+    "nameEn": "Guiyang",
+    "nameKo": "구이양",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Goiania",
+    "nameKo": "고이아니아",
+    "countryCode": "br"
+  },
+  {
+    "nameEn": "Guarulhos",
+    "nameKo": "구아룰류스",
+    "countryCode": "br"
+  },
+  {
+    "nameEn": "Varanasi",
+    "nameKo": "바라나시",
+    "countryCode": "in"
+  },
+  {
+    "nameEn": "Port Harcourt",
+    "nameKo": "포트하커트",
+    "countryCode": "ng"
+  },
+  {
+    "nameEn": "Hiroshima",
+    "nameKo": "히로시마",
+    "countryCode": "jp"
+  },
+  {
+    "nameEn": "Zapopan",
+    "nameKo": "사포판",
+    "countryCode": "mx"
+  },
+  {
+    "nameEn": "Lijiang",
+    "nameKo": "리장",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Monterrey",
+    "nameKo": "몬테레이",
+    "countryCode": "mx"
+  },
+  {
+    "nameEn": "Samara",
+    "nameKo": "사마라",
+    "countryCode": "ru"
+  },
+  {
+    "nameEn": "Omsk",
+    "nameKo": "옴스크",
+    "countryCode": "ru"
+  },
+  {
+    "nameEn": "Benin City",
+    "nameKo": "베냉시티",
+    "countryCode": "ng"
+  },
+  {
+    "nameEn": "Malingao",
+    "nameKo": "말린가오",
+    "countryCode": "ph"
+  },
+  {
+    "nameEn": "Maiduguri",
+    "nameKo": "마이두구리",
+    "countryCode": "ng"
+  },
+  {
+    "nameEn": "Kazan",
+    "nameKo": "카잔",
+    "countryCode": "ru"
+  },
+  {
+    "nameEn": "Ciudad Nezahualcoyotl",
+    "nameKo": "시우다드네사우알코요틀",
+    "countryCode": "mx"
+  },
+  {
+    "nameEn": "Amritsar",
+    "nameKo": "암리차르",
+    "countryCode": "in"
+  },
+  {
+    "nameEn": "Yono",
+    "nameKo": "요노",
+    "countryCode": "jp"
+  },
+  {
+    "nameEn": "Rostov-na-Donu",
+    "nameKo": "로스토프나도누",
+    "countryCode": "ru"
+  },
+  {
+    "nameEn": "Allahabad",
+    "nameKo": "알라하바드",
+    "countryCode": "in"
+  },
+  {
+    "nameEn": "Goyang-si",
+    "nameKo": "고양시",
+    "countryCode": "kr"
+  },
+  {
+    "nameEn": "Gaziantep",
+    "nameKo": "가지안테프",
+    "countryCode": "tr"
+  },
+  {
+    "nameEn": "Visakhapatnam",
+    "nameKo": "비사카파트남",
+    "countryCode": "in"
+  },
+  {
+    "nameEn": "Sendai",
+    "nameKo": "센다이",
+    "countryCode": "jp"
+  },
+  {
+    "nameEn": "Chelyabinsk",
+    "nameKo": "첼랴빈스크",
+    "countryCode": "ru"
+  },
+  {
+    "nameEn": "Datong",
+    "nameKo": "다퉁",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Changshu",
+    "nameKo": "창수",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Taichung",
+    "nameKo": "타이중",
+    "countryCode": "tw"
+  },
+  {
+    "nameEn": "Teni",
+    "nameKo": "테니",
+    "countryCode": "in"
+  },
+  {
+    "nameEn": "Xianyang",
+    "nameKo": "셴양",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Ufa",
+    "nameKo": "우파",
+    "countryCode": "ru"
+  },
+  {
+    "nameEn": "Seongnam-si",
+    "nameKo": "성남시",
+    "countryCode": "kr"
+  },
+  {
+    "nameEn": "Campinas",
+    "nameKo": "캄피나스",
+    "countryCode": "br"
+  },
+  {
+    "nameEn": "Jabalpur",
+    "nameKo": "자발푸르",
+    "countryCode": "in"
+  },
+  {
+    "nameEn": "Haora",
+    "nameKo": "하우라",
+    "countryCode": "in"
+  },
+  {
+    "nameEn": "Huainan",
+    "nameKo": "화이난",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "San Jose",
+    "nameKo": "새너제이",
+    "countryCode": "us"
+  },
+  {
+    "nameEn": "Donetsk",
+    "nameKo": "도네츠크",
+    "countryCode": "ua"
+  },
+  {
+    "nameEn": "Calgary",
+    "nameKo": "캘거리",
+    "countryCode": "ca"
+  },
+  {
+    "nameEn": "Aurangabad",
+    "nameKo": "아우랑가바드",
+    "countryCode": "in"
+  },
+  {
+    "nameEn": "Odessa",
+    "nameKo": "오데사",
+    "countryCode": "ua"
+  },
+  {
+    "nameEn": "Volgograd",
+    "nameKo": "볼고그라드",
+    "countryCode": "ru"
+  },
+  {
+    "nameEn": "Nova Iguacu",
+    "nameKo": "노바이과수",
+    "countryCode": "br"
+  },
+  {
+    "nameEn": "Jieyang",
+    "nameKo": "제양",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Zhu Cheng City",
+    "nameKo": "주청시",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Shivaji Nagar",
+    "nameKo": "시바지나가르",
+    "countryCode": "in"
+  },
+  {
+    "nameEn": "Dnipro",
+    "nameKo": "드니프로",
+    "countryCode": "ua"
+  },
+  {
+    "nameEn": "Kitakyushu",
+    "nameKo": "기타큐슈",
+    "countryCode": "jp"
+  },
+  {
+    "nameEn": "Solapur",
+    "nameKo": "솔라푸르",
+    "countryCode": "in"
+  },
+  {
+    "nameEn": "Baoding",
+    "nameKo": "바오딩",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Benxi",
+    "nameKo": "번시",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Birmingham",
+    "nameKo": "버밍엄",
+    "countryCode": "gb"
+  },
+  {
+    "nameEn": "Perm",
+    "nameKo": "페름",
+    "countryCode": "ru"
+  },
+  {
+    "nameEn": "Srinagar",
+    "nameKo": "스리나가르",
+    "countryCode": "in"
+  },
+  {
+    "nameEn": "Zaria",
+    "nameKo": "자리아",
+    "countryCode": "ng"
+  },
+  {
+    "nameEn": "Port Elizabeth",
+    "nameKo": "포트엘리자베스",
+    "countryCode": "za"
+  },
+  {
+    "nameEn": "Fes",
+    "nameKo": "페스",
+    "countryCode": "ma"
+  },
+  {
+    "nameEn": "Koeln",
+    "nameKo": "쾰른",
+    "countryCode": "de"
+  },
+  {
+    "nameEn": "Chandigarh",
+    "nameKo": "찬디가르",
+    "countryCode": "in"
+  },
+  {
+    "nameEn": "Coimbatore",
+    "nameKo": "코임바토레",
+    "countryCode": "in"
+  },
+  {
+    "nameEn": "Naples",
+    "nameKo": "나폴리",
+    "countryCode": "it"
+  },
+  {
+    "nameEn": "Maceio",
+    "nameKo": "마세이오",
+    "countryCode": "br"
+  },
+  {
+    "nameEn": "Cartagena",
+    "nameKo": "카르타헤나",
+    "countryCode": "co"
+  },
+  {
+    "nameEn": "Changzhou",
+    "nameKo": "창저우",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Sultanah",
+    "nameKo": "술타나",
+    "countryCode": "sa"
+  },
+  {
+    "nameEn": "Erbil",
+    "nameKo": "아르빌",
+    "countryCode": "iq"
+  },
+  {
+    "nameEn": "Austin",
+    "nameKo": "오스틴",
+    "countryCode": "us"
+  },
+  {
+    "nameEn": "Krasnoyarsk",
+    "nameKo": "크라스노야르스크",
+    "countryCode": "ru"
+  },
+  {
+    "nameEn": "Nay Pyi Taw",
+    "nameKo": "네피도",
+    "countryCode": "mm"
+  },
+  {
+    "nameEn": "Jodhpur",
+    "nameKo": "조드푸르",
+    "countryCode": "in"
+  },
+  {
+    "nameEn": "Chiba",
+    "nameKo": "지바",
+    "countryCode": "jp"
+  },
+  {
+    "nameEn": "Sao Luis",
+    "nameKo": "상루이스",
+    "countryCode": "br"
+  },
+  {
+    "nameEn": "Madurai",
+    "nameKo": "마두라이",
+    "countryCode": "in"
+  },
+  {
+    "nameEn": "Sale",
+    "nameKo": "살레",
+    "countryCode": "ma"
+  },
+  {
+    "nameEn": "Huaibei",
+    "nameKo": "화이베이",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Cochabamba",
+    "nameKo": "코차밤바",
+    "countryCode": "bo"
+  },
+  {
+    "nameEn": "Abobo",
+    "nameKo": "아보보",
+    "countryCode": "ci"
+  },
+  {
+    "nameEn": "Kaifeng",
+    "nameKo": "카이펑",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Abu Ghurayb",
+    "nameKo": "아부그라이브",
+    "countryCode": "iq"
+  },
+  {
+    "nameEn": "Qom",
+    "nameKo": "곰",
+    "countryCode": "ir"
+  },
+  {
+    "nameEn": "Guwahati",
+    "nameKo": "구와하티",
+    "countryCode": "in"
+  },
+  {
+    "nameEn": "Aba",
+    "nameKo": "아바",
+    "countryCode": "ng"
+  },
+  {
+    "nameEn": "Pingdingshan",
+    "nameKo": "핑딩산",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Gwalior",
+    "nameKo": "괄리오르",
+    "countryCode": "in"
+  },
+  {
+    "nameEn": "Qiqihar",
+    "nameKo": "치치하얼",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Klang",
+    "nameKo": "클랑",
+    "countryCode": "my"
+  },
+  {
+    "nameEn": "Mendoza",
+    "nameKo": "멘도사",
+    "countryCode": "ar"
+  },
+  {
+    "nameEn": "Konya",
+    "nameKo": "코니아",
+    "countryCode": "tr"
+  },
+  {
+    "nameEn": "Mbuji-Mayi",
+    "nameKo": "음부지마이",
+    "countryCode": "cd"
+  },
+  {
+    "nameEn": "Vijayawada",
+    "nameKo": "비자야와다",
+    "countryCode": "in"
+  },
+  {
+    "nameEn": "Pikine",
+    "nameKo": "피킨",
+    "countryCode": "sn"
+  },
+  {
+    "nameEn": "Turin",
+    "nameKo": "토리노",
+    "countryCode": "it"
+  },
+  {
+    "nameEn": "Mysore",
+    "nameKo": "마이소르",
+    "countryCode": "in"
+  },
+  {
+    "nameEn": "Jacksonville",
+    "nameKo": "잭슨빌",
+    "countryCode": "us"
+  },
+  {
+    "nameEn": "Wenzhou",
+    "nameKo": "원저우",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "San Francisco",
+    "nameKo": "샌프란시스코",
+    "countryCode": "us"
+  },
+  {
+    "nameEn": "Liverpool",
+    "nameKo": "리버풀",
+    "countryCode": "gb"
+  },
+  {
+    "nameEn": "Saratov",
+    "nameKo": "사라토프",
+    "countryCode": "ru"
+  },
+  {
+    "nameEn": "Rohini",
+    "nameKo": "로히니",
+    "countryCode": "in"
+  },
+  {
+    "nameEn": "Bucheon-si",
+    "nameKo": "부천시",
+    "countryCode": "kr"
+  },
+  {
+    "nameEn": "Columbus",
+    "nameKo": "콜럼버스",
+    "countryCode": "us"
+  },
+  {
+    "nameEn": "Voronezh",
+    "nameKo": "보로네시",
+    "countryCode": "ru"
+  },
+  {
+    "nameEn": "Ranchi",
+    "nameKo": "란치",
+    "countryCode": "in"
+  },
+  {
+    "nameEn": "Ulan Bator",
+    "nameKo": "울란바토르",
+    "countryCode": "mn"
+  },
+  {
+    "nameEn": "Takeo",
+    "nameKo": "타케오",
+    "countryCode": "kh"
+  },
+  {
+    "nameEn": "Ahvaz",
+    "nameKo": "아바즈",
+    "countryCode": "ir"
+  },
+  {
+    "nameEn": "Arequipa",
+    "nameKo": "아레키파",
+    "countryCode": "pe"
+  },
+  {
+    "nameEn": "Padang",
+    "nameKo": "파당",
+    "countryCode": "id"
+  },
+  {
+    "nameEn": "Hubli",
+    "nameKo": "후블리",
+    "countryCode": "in"
+  },
+  {
+    "nameEn": "Marrakesh",
+    "nameKo": "마라케시",
+    "countryCode": "ma"
+  },
+  {
+    "nameEn": "Denpasar",
+    "nameKo": "덴파사르",
+    "countryCode": "id"
+  },
+  {
+    "nameEn": "Kampung Baru Subang",
+    "nameKo": "캄풍바루수방",
+    "countryCode": "my"
+  },
+  {
+    "nameEn": "Fort Worth",
+    "nameKo": "포트워스",
+    "countryCode": "us"
+  },
+  {
+    "nameEn": "Indianapolis",
+    "nameKo": "인디애나폴리스",
+    "countryCode": "us"
+  },
+  {
+    "nameEn": "Charlotte",
+    "nameKo": "샬럿",
+    "countryCode": "us"
+  },
+  {
+    "nameEn": "Duque de Caxias",
+    "nameKo": "두케지카시아스",
+    "countryCode": "br"
+  },
+  {
+    "nameEn": "Jos",
+    "nameKo": "조스",
+    "countryCode": "ng"
+  },
+  {
+    "nameEn": "Valencia",
+    "nameKo": "발렌시아",
+    "countryCode": "es"
+  },
+  {
+    "nameEn": "Ilorin",
+    "nameKo": "일로린",
+    "countryCode": "ng"
+  },
+  {
+    "nameEn": "Callao",
+    "nameKo": "카야오",
+    "countryCode": "pe"
+  },
+  {
+    "nameEn": "Barquisimeto",
+    "nameKo": "바르키시메토",
+    "countryCode": "ve"
+  },
+  {
+    "nameEn": "Chihuahua",
+    "nameKo": "치와와",
+    "countryCode": "mx"
+  },
+  {
+    "nameEn": "Nanning",
+    "nameKo": "난닝",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Johor Bahru",
+    "nameKo": "조호르바루",
+    "countryCode": "my"
+  },
+  {
+    "nameEn": "Bandar Lampung",
+    "nameKo": "반다르람풍",
+    "countryCode": "id"
+  },
+  {
+    "nameEn": "Bogor",
+    "nameKo": "보고르",
+    "countryCode": "id"
+  },
+  {
+    "nameEn": "Mombasa",
+    "nameKo": "몸바사",
+    "countryCode": "ke"
+  },
+  {
+    "nameEn": "Cebu City",
+    "nameKo": "세부시",
+    "countryCode": "ph"
+  },
+  {
+    "nameEn": "Marseille",
+    "nameKo": "마르세유",
+    "countryCode": "fr"
+  },
+  {
+    "nameEn": "Zarqa",
+    "nameKo": "자르카",
+    "countryCode": "jo"
+  },
+  {
+    "nameEn": "Naucalpan de Juarez",
+    "nameKo": "나우칼판데후아레스",
+    "countryCode": "mx"
+  },
+  {
+    "nameEn": "Cankaya",
+    "nameKo": "찬카야",
+    "countryCode": "tr"
+  },
+  {
+    "nameEn": "Boumerdas",
+    "nameKo": "부메르데스",
+    "countryCode": "dz"
+  },
+  {
+    "nameEn": "Jalandhar",
+    "nameKo": "잘란다르",
+    "countryCode": "in"
+  },
+  {
+    "nameEn": "Thiruvananthapuram",
+    "nameKo": "티루바난타푸람",
+    "countryCode": "in"
+  },
+  {
+    "nameEn": "Sakai",
+    "nameKo": "사카이",
+    "countryCode": "jp"
+  },
+  {
+    "nameEn": "Anyang",
+    "nameKo": "안양",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "San Miguel de Tucuman",
+    "nameKo": "산미겔데투쿠만",
+    "countryCode": "ar"
+  },
+  {
+    "nameEn": "Cotonou",
+    "nameKo": "코토누",
+    "countryCode": "bj"
+  },
+  {
+    "nameEn": "Salem",
+    "nameKo": "살렘",
+    "countryCode": "in"
+  },
+  {
+    "nameEn": "Merida",
+    "nameKo": "메리다",
+    "countryCode": "mx"
+  },
+  {
+    "nameEn": "Tiruchirappalli",
+    "nameKo": "티루치라팔리",
+    "countryCode": "in"
+  },
+  {
+    "nameEn": "Homs",
+    "nameKo": "홈스",
+    "countryCode": "sy"
+  },
+  {
+    "nameEn": "Hohhot",
+    "nameKo": "후허하오터",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Tainan",
+    "nameKo": "타이난",
+    "countryCode": "tw"
+  },
+  {
+    "nameEn": "Shangyu",
+    "nameKo": "상위",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Lodz",
+    "nameKo": "우치",
+    "countryCode": "pl"
+  },
+  {
+    "nameEn": "Dammam",
+    "nameKo": "담맘",
+    "countryCode": "sa"
+  },
+  {
+    "nameEn": "Xining",
+    "nameKo": "시닝",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Kahriz",
+    "nameKo": "카리즈",
+    "countryCode": "ir"
+  },
+  {
+    "nameEn": "Kota",
+    "nameKo": "코타",
+    "countryCode": "in"
+  },
+  {
+    "nameEn": "Natal",
+    "nameKo": "나타우",
+    "countryCode": "br"
+  },
+  {
+    "nameEn": "Bhubaneshwar",
+    "nameKo": "부바네슈와르",
+    "countryCode": "in"
+  },
+  {
+    "nameEn": "Qinhuangdao",
+    "nameKo": "친황다오",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Hengyang",
+    "nameKo": "헝양",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Antalya",
+    "nameKo": "안탈리아",
+    "countryCode": "tr"
+  },
+  {
+    "nameEn": "Krakow",
+    "nameKo": "크라쿠프",
+    "countryCode": "pl"
+  },
+  {
+    "nameEn": "Aligarh",
+    "nameKo": "알리가르",
+    "countryCode": "in"
+  },
+  {
+    "nameEn": "Da Nang",
+    "nameKo": "다낭",
+    "countryCode": "vn"
+  },
+  {
+    "nameEn": "Pietermaritzburg",
+    "nameKo": "피터마리츠버그",
+    "countryCode": "za"
+  },
+  {
+    "nameEn": "Trujillo",
+    "nameKo": "트루히요",
+    "countryCode": "pe"
+  },
+  {
+    "nameEn": "Malang",
+    "nameKo": "말랑",
+    "countryCode": "id"
+  },
+  {
+    "nameEn": "Ciudad Guayana",
+    "nameKo": "시우다드과야나",
+    "countryCode": "ve"
+  },
+  {
+    "nameEn": "Bareilly",
+    "nameKo": "바레일리",
+    "countryCode": "in"
+  },
+  {
+    "nameEn": "Teresina",
+    "nameKo": "테레지나",
+    "countryCode": "br"
+  },
+  {
+    "nameEn": "Xinxiang",
+    "nameKo": "신샹",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Sao Bernardo do Campo",
+    "nameKo": "상베르나르두두캄푸",
+    "countryCode": "br"
+  },
+  {
+    "nameEn": "Hegang",
+    "nameKo": "허강",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Zaporizhzhya",
+    "nameKo": "자포리자",
+    "countryCode": "ua"
+  },
+  {
+    "nameEn": "Oyo",
+    "nameKo": "오요",
+    "countryCode": "ng"
+  },
+  {
+    "nameEn": "Quetta",
+    "nameKo": "퀘타",
+    "countryCode": "pk"
+  },
+  {
+    "nameEn": "Campo Grande",
+    "nameKo": "캄푸그란지",
+    "countryCode": "br"
+  },
+  {
+    "nameEn": "Alvaro Obregon",
+    "nameKo": "알바로오브레곤",
+    "countryCode": "mx"
+  },
+  {
+    "nameEn": "Muzaffarabad",
+    "nameKo": "무자파라바드",
+    "countryCode": "pk"
+  },
+  {
+    "nameEn": "Bagcilar",
+    "nameKo": "바지칠라르",
+    "countryCode": "tr"
+  },
+  {
+    "nameEn": "As Sulaymaniyah",
+    "nameKo": "술라이마니야",
+    "countryCode": "iq"
+  },
+  {
+    "nameEn": "San Luis Potosi",
+    "nameKo": "산루이스포토시",
+    "countryCode": "mx"
+  },
+  {
+    "nameEn": "Aguascalientes",
+    "nameKo": "아과스칼리엔테스",
+    "countryCode": "mx"
+  },
+  {
+    "nameEn": "Cucuta",
+    "nameKo": "쿠쿠타",
+    "countryCode": "co"
+  },
+  {
+    "nameEn": "Moradabad",
+    "nameKo": "모라다바드",
+    "countryCode": "in"
+  },
+  {
+    "nameEn": "Langfang",
+    "nameKo": "랑팡",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Zhumadian",
+    "nameKo": "주마뎬",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Yantai",
+    "nameKo": "옌타이",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Lviv",
+    "nameKo": "리비우",
+    "countryCode": "ua"
+  },
+  {
+    "nameEn": "Hermosillo",
+    "nameKo": "에르모시요",
+    "countryCode": "mx"
+  },
+  {
+    "nameEn": "Edmonton",
+    "nameKo": "에드먼턴",
+    "countryCode": "ca"
+  },
+  {
+    "nameEn": "Saltillo",
+    "nameKo": "살티요",
+    "countryCode": "mx"
+  },
+  {
+    "nameEn": "Zhuzhou",
+    "nameKo": "주저우",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Subang Jaya",
+    "nameKo": "수방자야",
+    "countryCode": "my"
+  },
+  {
+    "nameEn": "Bhiwandi",
+    "nameKo": "비완디",
+    "countryCode": "in"
+  },
+  {
+    "nameEn": "Pekanbaru",
+    "nameKo": "페칸바루",
+    "countryCode": "id"
+  },
+  {
+    "nameEn": "Sevilla",
+    "nameKo": "세비야",
+    "countryCode": "es"
+  },
+  {
+    "nameEn": "Tolyatti",
+    "nameKo": "톨리야티",
+    "countryCode": "ru"
+  },
+  {
+    "nameEn": "Jaboatao",
+    "nameKo": "자보아탕",
+    "countryCode": "br"
+  },
+  {
+    "nameEn": "Shizuoka",
+    "nameKo": "시즈오카",
+    "countryCode": "jp"
+  },
+  {
+    "nameEn": "Rajshahi",
+    "nameKo": "라지샤히",
+    "countryCode": "bd"
+  },
+  {
+    "nameEn": "Santo Domingo Este",
+    "nameKo": "산토도밍고에스테",
+    "countryCode": "do"
+  },
+  {
+    "nameEn": "City of Balikpapan",
+    "nameKo": "발릭파판시",
+    "countryCode": "id"
+  },
+  {
+    "nameEn": "Battagram",
+    "nameKo": "바타그람",
+    "countryCode": "pk"
+  },
+  {
+    "nameEn": "Changzhi",
+    "nameKo": "창즈",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Bulawayo",
+    "nameKo": "불라와요",
+    "countryCode": "zw"
+  },
+  {
+    "nameEn": "Agadir",
+    "nameKo": "아가디르",
+    "countryCode": "ma"
+  },
+  {
+    "nameEn": "La Plata",
+    "nameKo": "라플라타",
+    "countryCode": "ar"
+  },
+  {
+    "nameEn": "Zhangjiakou",
+    "nameKo": "장자커우",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Zigong",
+    "nameKo": "쯔궁",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Mexicali",
+    "nameKo": "멕시칼리",
+    "countryCode": "mx"
+  },
+  {
+    "nameEn": "Fuxin",
+    "nameKo": "푸신",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Enugu",
+    "nameKo": "에누구",
+    "countryCode": "ng"
+  },
+  {
+    "nameEn": "Tangier",
+    "nameKo": "탕헤르",
+    "countryCode": "ma"
+  },
+  {
+    "nameEn": "Huangshi",
+    "nameKo": "황스",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Liaoyang",
+    "nameKo": "랴오양",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Sheffield",
+    "nameKo": "셰필드",
+    "countryCode": "gb"
+  },
+  {
+    "nameEn": "Seattle",
+    "nameKo": "시애틀",
+    "countryCode": "us"
+  },
+  {
+    "nameEn": "Denver",
+    "nameKo": "덴버",
+    "countryCode": "us"
+  },
+  {
+    "nameEn": "El Paso",
+    "nameKo": "엘패소",
+    "countryCode": "us"
+  },
+  {
+    "nameEn": "Kumamoto",
+    "nameKo": "구마모토",
+    "countryCode": "jp"
+  },
+  {
+    "nameEn": "Raipur",
+    "nameKo": "라이푸르",
+    "countryCode": "in"
+  },
+  {
+    "nameEn": "General Santos",
+    "nameKo": "제너럴산토스",
+    "countryCode": "ph"
+  },
+  {
+    "nameEn": "Osasco",
+    "nameKo": "오사스쿠",
+    "countryCode": "br"
+  },
+  {
+    "nameEn": "Detroit",
+    "nameKo": "디트로이트",
+    "countryCode": "us"
+  },
+  {
+    "nameEn": "Culiacan",
+    "nameKo": "쿨리아칸",
+    "countryCode": "mx"
+  },
+  {
+    "nameEn": "Matola",
+    "nameKo": "마토라",
+    "countryCode": "mz"
+  },
+  {
+    "nameEn": "Zaragoza",
+    "nameKo": "사라고사",
+    "countryCode": "es"
+  },
+  {
+    "nameEn": "Xiangtan",
+    "nameKo": "샹탄",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Guadalupe",
+    "nameKo": "과달루페",
+    "countryCode": "mx"
+  },
+  {
+    "nameEn": "Acapulco de Juarez",
+    "nameKo": "아카풀코데후아레스",
+    "countryCode": "mx"
+  },
+  {
+    "nameEn": "Ipoh",
+    "nameKo": "이포",
+    "countryCode": "my"
+  },
+  {
+    "nameEn": "Mississauga",
+    "nameKo": "미시소가",
+    "countryCode": "ca"
+  },
+  {
+    "nameEn": "Boston",
+    "nameKo": "보스턴",
+    "countryCode": "us"
+  },
+  {
+    "nameEn": "Puyang Chengguanzhen",
+    "nameKo": "푸양청관진",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Nantong",
+    "nameKo": "난퉁",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Mudanjiang",
+    "nameKo": "무단장",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Santo Andre",
+    "nameKo": "산투안드레",
+    "countryCode": "br"
+  },
+  {
+    "nameEn": "Pointe-Noire",
+    "nameKo": "푸앵트누아르",
+    "countryCode": "cg"
+  },
+  {
+    "nameEn": "Memphis",
+    "nameKo": "멤피스",
+    "countryCode": "us"
+  },
+  {
+    "nameEn": "Tlalnepantla",
+    "nameKo": "틀랄네판틀라",
+    "countryCode": "mx"
+  },
+  {
+    "nameEn": "Joao Pessoa",
+    "nameKo": "주앙페소아",
+    "countryCode": "br"
+  },
+  {
+    "nameEn": "Ansan-si",
+    "nameKo": "안산시",
+    "countryCode": "kr"
+  },
+  {
+    "nameEn": "Benghazi",
+    "nameKo": "벵가지",
+    "countryCode": "ly"
+  },
+  {
+    "nameEn": "Frankfurt am Main",
+    "nameKo": "프랑크푸르트암마인",
+    "countryCode": "de"
+  },
+  {
+    "nameEn": "Krasnodar",
+    "nameKo": "크라스노다르",
+    "countryCode": "ru"
+  },
+  {
+    "nameEn": "Guilin",
+    "nameKo": "구이린",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Palermo",
+    "nameKo": "팔레르모",
+    "countryCode": "it"
+  },
+  {
+    "nameEn": "Oran",
+    "nameKo": "오랑",
+    "countryCode": "dz"
+  },
+  {
+    "nameEn": "Diyarbakir",
+    "nameKo": "디야르바키르",
+    "countryCode": "tr"
+  },
+  {
+    "nameEn": "Taguig",
+    "nameKo": "타기그",
+    "countryCode": "ph"
+  },
+  {
+    "nameEn": "New South Memphis",
+    "nameKo": "뉴사우스멤피스",
+    "countryCode": "us"
+  },
+  {
+    "nameEn": "Ulyanovsk",
+    "nameKo": "울리야놉스크",
+    "countryCode": "ru"
+  },
+  {
+    "nameEn": "Kotli",
+    "nameKo": "코틀리",
+    "countryCode": "pk"
+  },
+  {
+    "nameEn": "Okayama",
+    "nameKo": "오카야마",
+    "countryCode": "jp"
+  },
+  {
+    "nameEn": "Zhanjiang",
+    "nameKo": "잔장",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Al Ahmadi",
+    "nameKo": "알아마디",
+    "countryCode": "kw"
+  },
+  {
+    "nameEn": "Yogyakarta",
+    "nameKo": "욕야카르타",
+    "countryCode": "id"
+  },
+  {
+    "nameEn": "Wroclaw",
+    "nameKo": "브로츠와프",
+    "countryCode": "pl"
+  },
+  {
+    "nameEn": "Cheongju-si",
+    "nameKo": "청주시",
+    "countryCode": "kr"
+  },
+  {
+    "nameEn": "Anyang-si",
+    "nameKo": "안양시",
+    "countryCode": "kr"
+  },
+  {
+    "nameEn": "Tebessa",
+    "nameKo": "테베사",
+    "countryCode": "dz"
+  },
+  {
+    "nameEn": "Zhenjiang",
+    "nameKo": "전장",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Portland",
+    "nameKo": "포틀랜드",
+    "countryCode": "us"
+  },
+  {
+    "nameEn": "Winnipeg",
+    "nameKo": "위니펙",
+    "countryCode": "ca"
+  },
+  {
+    "nameEn": "Dandong",
+    "nameKo": "단둥",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Oklahoma City",
+    "nameKo": "오클라호마시티",
+    "countryCode": "us"
+  },
+  {
+    "nameEn": "Izhevsk",
+    "nameKo": "이젭스크",
+    "countryCode": "ru"
+  },
+  {
+    "nameEn": "Jaboatao dos Guararapes",
+    "nameKo": "자보아탕도스구아라라페스",
+    "countryCode": "br"
+  },
+  {
+    "nameEn": "Shaoguan",
+    "nameKo": "사오관",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Yancheng",
+    "nameKo": "옌청",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Cancun",
+    "nameKo": "칸쿤",
+    "countryCode": "mx"
+  },
+  {
+    "nameEn": "Contagem",
+    "nameKo": "콘타젬",
+    "countryCode": "br"
+  },
+  {
+    "nameEn": "Santiago de Queretaro",
+    "nameKo": "산티아고데케레타로",
+    "countryCode": "mx"
+  },
+  {
+    "nameEn": "Bhilai",
+    "nameKo": "빌라이",
+    "countryCode": "in"
+  },
+  {
+    "nameEn": "Panshan",
+    "nameKo": "판산",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Kryvyy Rih",
+    "nameKo": "크리비리흐",
+    "countryCode": "ua"
+  },
+  {
+    "nameEn": "Las Vegas",
+    "nameKo": "라스베이거스",
+    "countryCode": "us"
+  },
+  {
+    "nameEn": "Baltimore",
+    "nameKo": "볼티모어",
+    "countryCode": "us"
+  },
+  {
+    "nameEn": "Kermanshah",
+    "nameKo": "케르만샤",
+    "countryCode": "ir"
+  },
+  {
+    "nameEn": "Coyoacan",
+    "nameKo": "코요아칸",
+    "countryCode": "mx"
+  },
+  {
+    "nameEn": "Ribeirao Preto",
+    "nameKo": "히베이랑프레투",
+    "countryCode": "br"
+  },
+  {
+    "nameEn": "Al Hudaydah",
+    "nameKo": "알후다이다",
+    "countryCode": "ye"
+  },
+  {
+    "nameEn": "Bristol",
+    "nameKo": "브리스톨",
+    "countryCode": "gb"
+  },
+  {
+    "nameEn": "Jamshedpur",
+    "nameKo": "잠셰드푸르",
+    "countryCode": "in"
+  },
+  {
+    "nameEn": "Haikou",
+    "nameKo": "하이커우",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Sao Jose dos Campos",
+    "nameKo": "상조제두스캄푸스",
+    "countryCode": "br"
+  },
+  {
+    "nameEn": "Santa Maria Chimalhuacan",
+    "nameKo": "산타마리아치말우아칸",
+    "countryCode": "mx"
+  },
+  {
+    "nameEn": "Taizhou",
+    "nameKo": "타이저우",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Xingtai",
+    "nameKo": "싱타이",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Borivli",
+    "nameKo": "보리블리",
+    "countryCode": "in"
+  },
+  {
+    "nameEn": "Torreon",
+    "nameKo": "토레온",
+    "countryCode": "mx"
+  },
+  {
+    "nameEn": "Yaroslavl",
+    "nameKo": "야로슬라블",
+    "countryCode": "ru"
+  },
+  {
+    "nameEn": "Benoni",
+    "nameKo": "베노니",
+    "countryCode": "za"
+  },
+  {
+    "nameEn": "Hamamatsu",
+    "nameKo": "하마마쓰",
+    "countryCode": "jp"
+  },
+  {
+    "nameEn": "Cochin",
+    "nameKo": "코친",
+    "countryCode": "in"
+  },
+  {
+    "nameEn": "Jinzhou",
+    "nameKo": "진저우",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Amravati",
+    "nameKo": "암라바티",
+    "countryCode": "in"
+  },
+  {
+    "nameEn": "Haiphong",
+    "nameKo": "하이퐁",
+    "countryCode": "vn"
+  },
+  {
+    "nameEn": "Washington",
+    "nameKo": "워싱턴",
+    "countryCode": "us"
+  },
+  {
+    "nameEn": "Kirkuk",
+    "nameKo": "키르쿠크",
+    "countryCode": "iq"
+  },
+  {
+    "nameEn": "Sangli",
+    "nameKo": "상글리",
+    "countryCode": "in"
+  },
+  {
+    "nameEn": "Milwaukee",
+    "nameKo": "밀워키",
+    "countryCode": "us"
+  },
+  {
+    "nameEn": "Vancouver",
+    "nameKo": "밴쿠버",
+    "countryCode": "ca"
+  },
+  {
+    "nameEn": "Shuangyashan",
+    "nameKo": "솽야산",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Situbondo",
+    "nameKo": "시투본도",
+    "countryCode": "id"
+  },
+  {
+    "nameEn": "Barnaul",
+    "nameKo": "바르나울",
+    "countryCode": "ru"
+  },
+  {
+    "nameEn": "Rotterdam",
+    "nameKo": "로테르담",
+    "countryCode": "nl"
+  },
+  {
+    "nameEn": "Morelia",
+    "nameKo": "모렐리아",
+    "countryCode": "mx"
+  },
+  {
+    "nameEn": "Luancheng",
+    "nameKo": "롼청",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Rasht",
+    "nameKo": "라슈트",
+    "countryCode": "ir"
+  },
+  {
+    "nameEn": "Abeokuta",
+    "nameKo": "아베오쿠타",
+    "countryCode": "ng"
+  },
+  {
+    "nameEn": "Essen",
+    "nameKo": "에센",
+    "countryCode": "de"
+  },
+  {
+    "nameEn": "Kayseri",
+    "nameKo": "카이세리",
+    "countryCode": "tr"
+  },
+  {
+    "nameEn": "Glasgow",
+    "nameKo": "글래스고",
+    "countryCode": "gb"
+  },
+  {
+    "nameEn": "Gold Coast",
+    "nameKo": "골드코스트",
+    "countryCode": "au"
+  },
+  {
+    "nameEn": "Yingkou",
+    "nameKo": "잉커우",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Las Pinas",
+    "nameKo": "라스피냐스",
+    "countryCode": "ph"
+  },
+  {
+    "nameEn": "Zhangzhou",
+    "nameKo": "장저우",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Stuttgart",
+    "nameKo": "슈투트가르트",
+    "countryCode": "de"
+  },
+  {
+    "nameEn": "Reynosa",
+    "nameKo": "레이노사",
+    "countryCode": "mx"
+  },
+  {
+    "nameEn": "Dortmund",
+    "nameKo": "도르트문트",
+    "countryCode": "de"
+  },
+  {
+    "nameEn": "Vladivostok",
+    "nameKo": "블라디보스토크",
+    "countryCode": "ru"
+  },
+  {
+    "nameEn": "Irkutsk",
+    "nameKo": "이르쿠츠크",
+    "countryCode": "ru"
+  },
+  {
+    "nameEn": "Blantyre",
+    "nameKo": "블랜타이어",
+    "countryCode": "mw"
+  },
+  {
+    "nameEn": "New Kingston",
+    "nameKo": "뉴킹스턴",
+    "countryCode": "jm"
+  },
+  {
+    "nameEn": "UEskuedar",
+    "nameKo": "위스퀴다르",
+    "countryCode": "tr"
+  },
+  {
+    "nameEn": "Genoa",
+    "nameKo": "제노바",
+    "countryCode": "it"
+  },
+  {
+    "nameEn": "Cuttack",
+    "nameKo": "커택",
+    "countryCode": "in"
+  },
+  {
+    "nameEn": "Hachioji",
+    "nameKo": "하치오지",
+    "countryCode": "jp"
+  },
+  {
+    "nameEn": "Khabarovsk",
+    "nameKo": "하바롭스크",
+    "countryCode": "ru"
+  },
+  {
+    "nameEn": "Khabarovsk Vtoroy",
+    "nameKo": "하바롭스크브토로이",
+    "countryCode": "ru"
+  },
+  {
+    "nameEn": "Kerman",
+    "nameKo": "케르만",
+    "countryCode": "ir"
+  },
+  {
+    "nameEn": "Chiclayo",
+    "nameKo": "치클라요",
+    "countryCode": "pe"
+  },
+  {
+    "nameEn": "Orumiyeh",
+    "nameKo": "우르미아",
+    "countryCode": "ir"
+  },
+  {
+    "nameEn": "Bahcelievler",
+    "nameKo": "바흐첼리에블레르",
+    "countryCode": "tr"
+  },
+  {
+    "nameEn": "Bengbu",
+    "nameKo": "벙부",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Bikaner",
+    "nameKo": "비카네르",
+    "countryCode": "in"
+  },
+  {
+    "nameEn": "Tlaquepaque",
+    "nameKo": "틀라케파케",
+    "countryCode": "mx"
+  },
+  {
+    "nameEn": "Tlalpan",
+    "nameKo": "틀랄판",
+    "countryCode": "mx"
+  },
+  {
+    "nameEn": "Umraniye",
+    "nameKo": "위마니예",
+    "countryCode": "tr"
+  },
+  {
+    "nameEn": "Duesseldorf",
+    "nameKo": "뒤셀도르프",
+    "countryCode": "de"
+  },
+  {
+    "nameEn": "Banjarmasin",
+    "nameKo": "반자르마신",
+    "countryCode": "id"
+  },
+  {
+    "nameEn": "Goeteborg",
+    "nameKo": "예테보리",
+    "countryCode": "se"
+  },
+  {
+    "nameEn": "Shihezi",
+    "nameKo": "스허쯔",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Bucaramanga",
+    "nameKo": "부카라망가",
+    "countryCode": "co"
+  },
+  {
+    "nameEn": "South Boston",
+    "nameKo": "사우스보스턴",
+    "countryCode": "us"
+  },
+  {
+    "nameEn": "Kuching",
+    "nameKo": "쿠칭",
+    "countryCode": "my"
+  },
+  {
+    "nameEn": "Poznan",
+    "nameKo": "포즈난",
+    "countryCode": "pl"
+  },
+  {
+    "nameEn": "Malaga",
+    "nameKo": "말라가",
+    "countryCode": "es"
+  },
+  {
+    "nameEn": "Bouake",
+    "nameKo": "부아케",
+    "countryCode": "ci"
+  },
+  {
+    "nameEn": "Nyala",
+    "nameKo": "니얄라",
+    "countryCode": "sd"
+  },
+  {
+    "nameEn": "Sokoto",
+    "nameKo": "소코토",
+    "countryCode": "ng"
+  },
+  {
+    "nameEn": "Uberlandia",
+    "nameKo": "우베를란디아",
+    "countryCode": "br"
+  },
+  {
+    "nameEn": "Onitsha",
+    "nameKo": "오니차",
+    "countryCode": "ng"
+  },
+  {
+    "nameEn": "Honcho",
+    "nameKo": "혼초",
+    "countryCode": "jp"
+  },
+  {
+    "nameEn": "Albuquerque",
+    "nameKo": "앨버커키",
+    "countryCode": "us"
+  },
+  {
+    "nameEn": "Hamhung",
+    "nameKo": "함흥",
+    "countryCode": "kp"
+  },
+  {
+    "nameEn": "Sorocaba",
+    "nameKo": "소로카바",
+    "countryCode": "br"
+  },
+  {
+    "nameEn": "Warangal",
+    "nameKo": "와랑갈",
+    "countryCode": "in"
+  },
+  {
+    "nameEn": "Santiago de Cuba",
+    "nameKo": "산티아고데쿠바",
+    "countryCode": "cu"
+  },
+  {
+    "nameEn": "Siping",
+    "nameKo": "쓰핑",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Kagoshima",
+    "nameKo": "가고시마",
+    "countryCode": "jp"
+  },
+  {
+    "nameEn": "Surakarta",
+    "nameKo": "수라카르타",
+    "countryCode": "id"
+  },
+  {
+    "nameEn": "Huai'an",
+    "nameKo": "화이안",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Bhavnagar",
+    "nameKo": "바브나가르",
+    "countryCode": "in"
+  },
+  {
+    "nameEn": "Mar del Plata",
+    "nameKo": "마르델플라타",
+    "countryCode": "ar"
+  },
+  {
+    "nameEn": "Bahawalpur",
+    "nameKo": "바하왈푸르",
+    "countryCode": "pk"
+  },
+  {
+    "nameEn": "Zahedan",
+    "nameKo": "자헤단",
+    "countryCode": "ir"
+  },
+  {
+    "nameEn": "Aden",
+    "nameKo": "아덴",
+    "countryCode": "ye"
+  },
+  {
+    "nameEn": "Orenburg",
+    "nameKo": "오렌부르크",
+    "countryCode": "ru"
+  },
+  {
+    "nameEn": "Jiamusi",
+    "nameKo": "자무쓰",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Antipolo",
+    "nameKo": "안티폴로",
+    "countryCode": "ph"
+  },
+  {
+    "nameEn": "Neijiang",
+    "nameKo": "네이장",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Bremen",
+    "nameKo": "브레멘",
+    "countryCode": "de"
+  },
+  {
+    "nameEn": "Meknes",
+    "nameKo": "메크네스",
+    "countryCode": "ma"
+  },
+  {
+    "nameEn": "Banqiao",
+    "nameKo": "반차오",
+    "countryCode": "tw"
+  },
+  {
+    "nameEn": "Sargodha",
+    "nameKo": "사르고다",
+    "countryCode": "pk"
+  },
+  {
+    "nameEn": "Yangzhou",
+    "nameKo": "양저우",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Novokuznetsk",
+    "nameKo": "노보쿠즈네츠크",
+    "countryCode": "ru"
+  },
+  {
+    "nameEn": "Kisangani",
+    "nameKo": "키상가니",
+    "countryCode": "cd"
+  },
+  {
+    "nameEn": "Port Said",
+    "nameKo": "포트사이드",
+    "countryCode": "eg"
+  },
+  {
+    "nameEn": "Mersin",
+    "nameKo": "메르신",
+    "countryCode": "tr"
+  },
+  {
+    "nameEn": "Tuxtla",
+    "nameKo": "툭스틀라",
+    "countryCode": "mx"
+  },
+  {
+    "nameEn": "Warri",
+    "nameKo": "와리",
+    "countryCode": "ng"
+  },
+  {
+    "nameEn": "Guli",
+    "nameKo": "구리",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Ebute Ikorodu",
+    "nameKo": "에부테이코로두",
+    "countryCode": "ng"
+  },
+  {
+    "nameEn": "Tanggu",
+    "nameKo": "탕구",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Jiangmen",
+    "nameKo": "장먼",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Cuauhtemoc",
+    "nameKo": "콰우테목",
+    "countryCode": "mx"
+  },
+  {
+    "nameEn": "Tucson",
+    "nameKo": "투손",
+    "countryCode": "us"
+  },
+  {
+    "nameEn": "Nashville",
+    "nameKo": "내슈빌",
+    "countryCode": "us"
+  },
+  {
+    "nameEn": "Ta'if",
+    "nameKo": "타이프",
+    "countryCode": "sa"
+  },
+  {
+    "nameEn": "Beira",
+    "nameKo": "베이라",
+    "countryCode": "mz"
+  },
+  {
+    "nameEn": "Guntur",
+    "nameKo": "군투르",
+    "countryCode": "in"
+  },
+  {
+    "nameEn": "Touba",
+    "nameKo": "투바",
+    "countryCode": "sn"
+  },
+  {
+    "nameEn": "Quebec",
+    "nameKo": "퀘벡",
+    "countryCode": "ca"
+  },
+  {
+    "nameEn": "Hamadan",
+    "nameKo": "하마단",
+    "countryCode": "ir"
+  },
+  {
+    "nameEn": "Cangzhou",
+    "nameKo": "창저우",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Dehra Dun",
+    "nameKo": "데라둔",
+    "countryCode": "in"
+  },
+  {
+    "nameEn": "Cuiaba",
+    "nameKo": "쿠이아바",
+    "countryCode": "br"
+  },
+  {
+    "nameEn": "Petaling Jaya",
+    "nameKo": "페탈링자야",
+    "countryCode": "my"
+  },
+  {
+    "nameEn": "Macau",
+    "nameKo": "마카오",
+    "countryCode": "mo"
+  },
+  {
+    "nameEn": "Esenler",
+    "nameKo": "에센레르",
+    "countryCode": "tr"
+  },
+  {
+    "nameEn": "Ryazan'",
+    "nameKo": "랴잔",
+    "countryCode": "ru"
+  },
+  {
+    "nameEn": "Fresno",
+    "nameKo": "프레즈노",
+    "countryCode": "us"
+  },
+  {
+    "nameEn": "Hamilton",
+    "nameKo": "해밀턴",
+    "countryCode": "ca"
+  },
+  {
+    "nameEn": "Tyumen",
+    "nameKo": "튜멘",
+    "countryCode": "ru"
+  },
+  {
+    "nameEn": "Durgapur",
+    "nameKo": "두르가푸르",
+    "countryCode": "in"
+  },
+  {
+    "nameEn": "Victoria de Durango",
+    "nameKo": "빅토리아데두랑고",
+    "countryCode": "mx"
+  },
+  {
+    "nameEn": "Ajmer",
+    "nameKo": "아지메르",
+    "countryCode": "in"
+  },
+  {
+    "nameEn": "Changde",
+    "nameKo": "창더",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Jiaozuo",
+    "nameKo": "자오쭤",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Ulhasnagar",
+    "nameKo": "울하스나가르",
+    "countryCode": "in"
+  },
+  {
+    "nameEn": "Kolhapur",
+    "nameKo": "콜하푸르",
+    "countryCode": "in"
+  },
+  {
+    "nameEn": "Lipetsk",
+    "nameKo": "리페츠크",
+    "countryCode": "ru"
+  },
+  {
+    "nameEn": "Siliguri",
+    "nameKo": "실리구리",
+    "countryCode": "in"
+  },
+  {
+    "nameEn": "Hannover",
+    "nameKo": "하노버",
+    "countryCode": "de"
+  },
+  {
+    "nameEn": "Eskisehir",
+    "nameKo": "에스키셰히르",
+    "countryCode": "tr"
+  },
+  {
+    "nameEn": "Azadshahr",
+    "nameKo": "아자드샤르",
+    "countryCode": "ir"
+  },
+  {
+    "nameEn": "Salta",
+    "nameKo": "살타",
+    "countryCode": "ar"
+  },
+  {
+    "nameEn": "Penza",
+    "nameKo": "펜자",
+    "countryCode": "ru"
+  },
+  {
+    "nameEn": "Tembisa",
+    "nameKo": "템비사",
+    "countryCode": "za"
+  },
+  {
+    "nameEn": "Bilimora",
+    "nameKo": "빌리모라",
+    "countryCode": "in"
+  },
+  {
+    "nameEn": "Aparecida de Goiania",
+    "nameKo": "아파레시다데고이아니아",
+    "countryCode": "br"
+  },
+  {
+    "nameEn": "Puente Alto",
+    "nameKo": "푸엔테알토",
+    "countryCode": "cl"
+  },
+  {
+    "nameEn": "Makati City",
+    "nameKo": "마카티시",
+    "countryCode": "ph"
+  },
+  {
+    "nameEn": "Tonghua",
+    "nameKo": "퉁화",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Naberezhnyye Chelny",
+    "nameKo": "나베레즈니예첼니",
+    "countryCode": "ru"
+  },
+  {
+    "nameEn": "Leicester",
+    "nameKo": "레스터",
+    "countryCode": "gb"
+  },
+  {
+    "nameEn": "Wuhu",
+    "nameKo": "우후",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Niigata",
+    "nameKo": "니가타",
+    "countryCode": "jp"
+  },
+  {
+    "nameEn": "Karol Bagh",
+    "nameKo": "카롤바그",
+    "countryCode": "in"
+  },
+  {
+    "nameEn": "Leipzig",
+    "nameKo": "라이프치히",
+    "countryCode": "de"
+  },
+  {
+    "nameEn": "Kalininskiy",
+    "nameKo": "칼리닌스키",
+    "countryCode": "ru"
+  },
+  {
+    "nameEn": "Duisburg",
+    "nameKo": "뒤스부르크",
+    "countryCode": "de"
+  },
+  {
+    "nameEn": "Asansol",
+    "nameKo": "아산솔",
+    "countryCode": "in"
+  },
+  {
+    "nameEn": "Arak",
+    "nameKo": "아라크",
+    "countryCode": "ir"
+  },
+  {
+    "nameEn": "Astrakhan",
+    "nameKo": "아스트라한",
+    "countryCode": "ru"
+  },
+  {
+    "nameEn": "Zhuhai",
+    "nameKo": "주하이",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Nuernberg",
+    "nameKo": "뉘른베르크",
+    "countryCode": "de"
+  },
+  {
+    "nameEn": "Shashi",
+    "nameKo": "사스",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Makhachkala",
+    "nameKo": "마하치칼라",
+    "countryCode": "ru"
+  },
+  {
+    "nameEn": "Cimahi",
+    "nameKo": "치마히",
+    "countryCode": "id"
+  },
+  {
+    "nameEn": "Wuwei",
+    "nameKo": "우웨이",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Jamnagar",
+    "nameKo": "자므나가르",
+    "countryCode": "in"
+  },
+  {
+    "nameEn": "Sacramento",
+    "nameKo": "새크라멘토",
+    "countryCode": "us"
+  },
+  {
+    "nameEn": "Aracaju",
+    "nameKo": "아라카주",
+    "countryCode": "br"
+  },
+  {
+    "nameEn": "Ajman City",
+    "nameKo": "아지만시",
+    "countryCode": "ae"
+  },
+  {
+    "nameEn": "Jianshui",
+    "nameKo": "젠수이",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Port Sudan",
+    "nameKo": "포트수단",
+    "countryCode": "sd"
+  },
+  {
+    "nameEn": "Santa Fe",
+    "nameKo": "산타페",
+    "countryCode": "ar"
+  },
+  {
+    "nameEn": "San Pedro Sula",
+    "nameKo": "산페드로술라",
+    "countryCode": "hn"
+  },
+  {
+    "nameEn": "Toluca",
+    "nameKo": "톨루카",
+    "countryCode": "mx"
+  },
+  {
+    "nameEn": "Ciudad Lopez Mateos",
+    "nameKo": "시우다드로페스마테오스",
+    "countryCode": "mx"
+  },
+  {
+    "nameEn": "Suez",
+    "nameKo": "수에즈",
+    "countryCode": "eg"
+  },
+  {
+    "nameEn": "Dresden",
+    "nameKo": "드레스덴",
+    "countryCode": "de"
+  },
+  {
+    "nameEn": "Tomsk",
+    "nameKo": "톰스크",
+    "countryCode": "ru"
+  },
+  {
+    "nameEn": "Masina",
+    "nameKo": "마시나",
+    "countryCode": "cd"
+  },
+  {
+    "nameEn": "Saharanpur",
+    "nameKo": "사하란푸르",
+    "countryCode": "in"
+  },
+  {
+    "nameEn": "Cuautitlan Izcalli",
+    "nameKo": "콰우티틀란이스칼리",
+    "countryCode": "mx"
+  },
+  {
+    "nameEn": "Gulbarga",
+    "nameKo": "굴바르가",
+    "countryCode": "in"
+  },
+  {
+    "nameEn": "Mykolayiv",
+    "nameKo": "미콜라이우",
+    "countryCode": "ua"
+  },
+  {
+    "nameEn": "Bhatpara",
+    "nameKo": "바트파라",
+    "countryCode": "in"
+  },
+  {
+    "nameEn": "Najaf",
+    "nameKo": "나자프",
+    "countryCode": "iq"
+  },
+  {
+    "nameEn": "Feira de Santana",
+    "nameKo": "페이라데산타나",
+    "countryCode": "br"
+  },
+  {
+    "nameEn": "Xichang",
+    "nameKo": "시창",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Shah Alam",
+    "nameKo": "샤알람",
+    "countryCode": "my"
+  },
+  {
+    "nameEn": "Mariupol",
+    "nameKo": "마리우폴",
+    "countryCode": "ua"
+  },
+  {
+    "nameEn": "Himeji",
+    "nameKo": "히메지",
+    "countryCode": "jp"
+  },
+  {
+    "nameEn": "Homyel'",
+    "nameKo": "고멜",
+    "countryCode": "by"
+  },
+  {
+    "nameEn": "Qionghai",
+    "nameKo": "충하이",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Okene",
+    "nameKo": "오케네",
+    "countryCode": "ng"
+  },
+  {
+    "nameEn": "Uijeongbu-si",
+    "nameKo": "의정부시",
+    "countryCode": "kr"
+  },
+  {
+    "nameEn": "East London",
+    "nameKo": "이스트런던",
+    "countryCode": "za"
+  },
+  {
+    "nameEn": "Yazd",
+    "nameKo": "야즈드",
+    "countryCode": "ir"
+  },
+  {
+    "nameEn": "Hargeysa",
+    "nameKo": "하르게이사",
+    "countryCode": "so"
+  },
+  {
+    "nameEn": "Sialkot",
+    "nameKo": "시알코트",
+    "countryCode": "pk"
+  },
+  {
+    "nameEn": "Kemerovo",
+    "nameKo": "케메로보",
+    "countryCode": "ru"
+  },
+  {
+    "nameEn": "Yichang",
+    "nameKo": "이창",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Hwaseong-si",
+    "nameKo": "화성시",
+    "countryCode": "kr"
+  },
+  {
+    "nameEn": "Kansas City",
+    "nameKo": "캔자스시티",
+    "countryCode": "us"
+  },
+  {
+    "nameEn": "Vereeniging",
+    "nameKo": "페레이니깅",
+    "countryCode": "za"
+  },
+  {
+    "nameEn": "The Hague",
+    "nameKo": "헤이그",
+    "countryCode": "nl"
+  },
+  {
+    "nameEn": "Long Beach",
+    "nameKo": "롱비치",
+    "countryCode": "us"
+  },
+  {
+    "nameEn": "Mixco",
+    "nameKo": "믹스코",
+    "countryCode": "gt"
+  },
+  {
+    "nameEn": "Lyon",
+    "nameKo": "리옹",
+    "countryCode": "fr"
+  },
+  {
+    "nameEn": "Londrina",
+    "nameKo": "론드리나",
+    "countryCode": "br"
+  },
+  {
+    "nameEn": "Mesa",
+    "nameKo": "메사",
+    "countryCode": "us"
+  },
+  {
+    "nameEn": "Jiaojiang",
+    "nameKo": "자오장",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Matsudo",
+    "nameKo": "마쓰도",
+    "countryCode": "jp"
+  },
+  {
+    "nameEn": "Juiz de Fora",
+    "nameKo": "주이스데포라",
+    "countryCode": "br"
+  },
+  {
+    "nameEn": "Nishinomiya-hama",
+    "nameKo": "니시노미야하마",
+    "countryCode": "jp"
+  },
+  {
+    "nameEn": "Tula",
+    "nameKo": "툴라",
+    "countryCode": "ru"
+  },
+  {
+    "nameEn": "Staten Island",
+    "nameKo": "스태튼아일랜드",
+    "countryCode": "us"
+  },
+  {
+    "nameEn": "Kawaguchi",
+    "nameKo": "가와구치",
+    "countryCode": "jp"
+  },
+  {
+    "nameEn": "Ciudad Apodaca",
+    "nameKo": "시우다드아포다카",
+    "countryCode": "mx"
+  },
+  {
+    "nameEn": "Zunyi",
+    "nameKo": "쭌이",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Jiaxing",
+    "nameKo": "자싱",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Belford Roxo",
+    "nameKo": "벨포르드록수",
+    "countryCode": "br"
+  },
+  {
+    "nameEn": "Jammu",
+    "nameKo": "잠무",
+    "countryCode": "in"
+  },
+  {
+    "nameEn": "Liaoyuan",
+    "nameKo": "랴오위안",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Edinburgh",
+    "nameKo": "에든버러",
+    "countryCode": "gb"
+  },
+  {
+    "nameEn": "Atlanta",
+    "nameKo": "애틀랜타",
+    "countryCode": "us"
+  },
+  {
+    "nameEn": "Kananga",
+    "nameKo": "카난가",
+    "countryCode": "cd"
+  },
+  {
+    "nameEn": "Bloemfontein",
+    "nameKo": "블룸폰테인",
+    "countryCode": "za"
+  },
+  {
+    "nameEn": "Xiangyang",
+    "nameKo": "샹양",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Gdansk",
+    "nameKo": "그단스크",
+    "countryCode": "pl"
+  },
+  {
+    "nameEn": "Calabar",
+    "nameKo": "칼라바르",
+    "countryCode": "ng"
+  },
+  {
+    "nameEn": "Dadukou",
+    "nameKo": "다두커우",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Joinville",
+    "nameKo": "조인빌리",
+    "countryCode": "br"
+  },
+  {
+    "nameEn": "Hamah",
+    "nameKo": "하마",
+    "countryCode": "sy"
+  },
+  {
+    "nameEn": "Kurnool",
+    "nameKo": "쿠르눌",
+    "countryCode": "in"
+  },
+  {
+    "nameEn": "Antwerpen",
+    "nameKo": "안트베르펜",
+    "countryCode": "be"
+  },
+  {
+    "nameEn": "Kanazawa",
+    "nameKo": "가나자와",
+    "countryCode": "jp"
+  },
+  {
+    "nameEn": "Karabaglar",
+    "nameKo": "카라바을라르",
+    "countryCode": "tr"
+  },
+  {
+    "nameEn": "Zamboanga",
+    "nameKo": "삼보앙가",
+    "countryCode": "ph"
+  },
+  {
+    "nameEn": "Kirov",
+    "nameKo": "키로프",
+    "countryCode": "ru"
+  },
+  {
+    "nameEn": "Ujjain",
+    "nameKo": "우자인",
+    "countryCode": "in"
+  },
+  {
+    "nameEn": "Kota Kinabalu",
+    "nameKo": "코타키나발루",
+    "countryCode": "my"
+  },
+  {
+    "nameEn": "Colorado Springs",
+    "nameKo": "콜로라도스프링스",
+    "countryCode": "us"
+  },
+  {
+    "nameEn": "Niteroi",
+    "nameKo": "니테로이",
+    "countryCode": "br"
+  },
+  {
+    "nameEn": "Hengshui",
+    "nameKo": "헝수이",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Tabuk",
+    "nameKo": "타부크",
+    "countryCode": "sa"
+  },
+  {
+    "nameEn": "Pontianak",
+    "nameKo": "폰티아낙",
+    "countryCode": "id"
+  },
+  {
+    "nameEn": "Leeds",
+    "nameKo": "리즈",
+    "countryCode": "gb"
+  },
+  {
+    "nameEn": "Namp'o",
+    "nameKo": "남포",
+    "countryCode": "kp"
+  },
+  {
+    "nameEn": "Bacolod City",
+    "nameKo": "바콜로드시",
+    "countryCode": "ph"
+  },
+  {
+    "nameEn": "Sao Joao de Meriti",
+    "nameKo": "상주앙지메리치",
+    "countryCode": "br"
+  },
+  {
+    "nameEn": "Mansilingan",
+    "nameKo": "만실링간",
+    "countryCode": "ph"
+  },
+  {
+    "nameEn": "Virginia Beach",
+    "nameKo": "버지니아비치",
+    "countryCode": "us"
+  },
+  {
+    "nameEn": "Luhansk",
+    "nameKo": "루한스크",
+    "countryCode": "ua"
+  },
+  {
+    "nameEn": "Manado",
+    "nameKo": "마나도",
+    "countryCode": "id"
+  },
+  {
+    "nameEn": "Karagandy",
+    "nameKo": "카라간다",
+    "countryCode": "kz"
+  },
+  {
+    "nameEn": "Raleigh",
+    "nameKo": "롤리",
+    "countryCode": "us"
+  },
+  {
+    "nameEn": "Jining",
+    "nameKo": "지닝",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Constantine",
+    "nameKo": "콩스탕틴",
+    "countryCode": "dz"
+  },
+  {
+    "nameEn": "Utsunomiya",
+    "nameKo": "우쓰노미야",
+    "countryCode": "jp"
+  },
+  {
+    "nameEn": "Heroica Matamoros",
+    "nameKo": "에로이카마타모로스",
+    "countryCode": "mx"
+  },
+  {
+    "nameEn": "Sanliurfa",
+    "nameKo": "샨르우르파",
+    "countryCode": "tr"
+  },
+  {
+    "nameEn": "Chengde",
+    "nameKo": "청더",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Oita",
+    "nameKo": "오이타",
+    "countryCode": "jp"
+  },
+  {
+    "nameEn": "Maheshtala",
+    "nameKo": "마헤슈탈라",
+    "countryCode": "in"
+  },
+  {
+    "nameEn": "Cardiff",
+    "nameKo": "카디프",
+    "countryCode": "gb"
+  },
+  {
+    "nameEn": "San Juan",
+    "nameKo": "산후안",
+    "countryCode": "ar"
+  },
+  {
+    "nameEn": "Cheboksary",
+    "nameKo": "체복사리",
+    "countryCode": "ru"
+  },
+  {
+    "nameEn": "Boksburg",
+    "nameKo": "복스버그",
+    "countryCode": "za"
+  },
+  {
+    "nameEn": "Cagayan de Oro",
+    "nameKo": "카가얀데오로",
+    "countryCode": "ph"
+  },
+  {
+    "nameEn": "Omaha",
+    "nameKo": "오마하",
+    "countryCode": "us"
+  },
+  {
+    "nameEn": "Matsuyama",
+    "nameKo": "마쓰야마",
+    "countryCode": "jp"
+  },
+  {
+    "nameEn": "San Nicolas de los Garza",
+    "nameKo": "산니콜라스델로스가르사",
+    "countryCode": "mx"
+  },
+  {
+    "nameEn": "Amagasaki",
+    "nameKo": "아마가사키",
+    "countryCode": "jp"
+  },
+  {
+    "nameEn": "Carrefour",
+    "nameKo": "카르푸르",
+    "countryCode": "ht"
+  },
+  {
+    "nameEn": "Shyamnagar",
+    "nameKo": "샴나가르",
+    "countryCode": "in"
+  },
+  {
+    "nameEn": "Dasmarinas",
+    "nameKo": "다스마리냐스",
+    "countryCode": "ph"
+  },
+  {
+    "nameEn": "Malatya",
+    "nameKo": "말라티아",
+    "countryCode": "tr"
+  },
+  {
+    "nameEn": "Miami",
+    "nameKo": "마이애미",
+    "countryCode": "us"
+  },
+  {
+    "nameEn": "Pereira",
+    "nameKo": "페레이라",
+    "countryCode": "co"
+  },
+  {
+    "nameEn": "Kozhikode",
+    "nameKo": "코지코드",
+    "countryCode": "in"
+  },
+  {
+    "nameEn": "Mawlamyine",
+    "nameKo": "몰먀잉",
+    "countryCode": "mm"
+  },
+  {
+    "nameEn": "Iquitos",
+    "nameKo": "이키토스",
+    "countryCode": "pe"
+  },
+  {
+    "nameEn": "Kurashiki",
+    "nameKo": "구라시키",
+    "countryCode": "jp"
+  },
+  {
+    "nameEn": "Sultangazi",
+    "nameKo": "술탄가지",
+    "countryCode": "tr"
+  },
+  {
+    "nameEn": "Garoua",
+    "nameKo": "가루아",
+    "countryCode": "cm"
+  },
+  {
+    "nameEn": "Murcia",
+    "nameKo": "무르시아",
+    "countryCode": "es"
+  },
+  {
+    "nameEn": "Mwanza",
+    "nameKo": "므완자",
+    "countryCode": "tz"
+  },
+  {
+    "nameEn": "Uyo",
+    "nameKo": "우요",
+    "countryCode": "ng"
+  },
+  {
+    "nameEn": "Bei'an",
+    "nameKo": "베이안",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Kousseri",
+    "nameKo": "쿠세리",
+    "countryCode": "cm"
+  },
+  {
+    "nameEn": "Malegaon",
+    "nameKo": "말레가온",
+    "countryCode": "in"
+  },
+  {
+    "nameEn": "Davangere",
+    "nameKo": "다반게레",
+    "countryCode": "in"
+  },
+  {
+    "nameEn": "Kaliningrad",
+    "nameKo": "칼리닌그라드",
+    "countryCode": "ru"
+  },
+  {
+    "nameEn": "Karbala",
+    "nameKo": "카르발라",
+    "countryCode": "iq"
+  },
+  {
+    "nameEn": "Masan",
+    "nameKo": "마산",
+    "countryCode": "kr"
+  },
+  {
+    "nameEn": "Ananindeua",
+    "nameKo": "아나닌데우아",
+    "countryCode": "br"
+  },
+  {
+    "nameEn": "Balikpapan",
+    "nameKo": "발릭파판",
+    "countryCode": "id"
+  },
+  {
+    "nameEn": "Brampton",
+    "nameKo": "브램턴",
+    "countryCode": "ca"
+  },
+  {
+    "nameEn": "Toulouse",
+    "nameKo": "툴루즈",
+    "countryCode": "fr"
+  },
+  {
+    "nameEn": "Tel Aviv",
+    "nameKo": "텔아비브",
+    "countryCode": "il"
+  },
+  {
+    "nameEn": "Namangan",
+    "nameKo": "나망간",
+    "countryCode": "uz"
+  },
+  {
+    "nameEn": "Katsina",
+    "nameKo": "카치나",
+    "countryCode": "ng"
+  },
+  {
+    "nameEn": "Welkom",
+    "nameKo": "웰컴",
+    "countryCode": "za"
+  },
+  {
+    "nameEn": "Santa Marta",
+    "nameKo": "산타마르타",
+    "countryCode": "co"
+  },
+  {
+    "nameEn": "Al Mahallah al Kubra",
+    "nameKo": "알마할라알쿠브라",
+    "countryCode": "eg"
+  },
+  {
+    "nameEn": "Venustiano Carranza",
+    "nameKo": "베누스티아노카란사",
+    "countryCode": "mx"
+  },
+  {
+    "nameEn": "Jalgaon",
+    "nameKo": "잘가온",
+    "countryCode": "in"
+  },
+  {
+    "nameEn": "Yokosuka",
+    "nameKo": "요코스카",
+    "countryCode": "jp"
+  },
+  {
+    "nameEn": "Akola",
+    "nameKo": "아콜라",
+    "countryCode": "in"
+  },
+  {
+    "nameEn": "Belgaum",
+    "nameKo": "벨가움",
+    "countryCode": "in"
+  },
+  {
+    "nameEn": "Veracruz",
+    "nameKo": "베라크루스",
+    "countryCode": "mx"
+  },
+  {
+    "nameEn": "East Jerusalem",
+    "nameKo": "동예루살렘",
+    "countryCode": "ps"
+  },
+  {
+    "nameEn": "Luqiao",
+    "nameKo": "루차오",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Bryansk",
+    "nameKo": "브랸스크",
+    "countryCode": "ru"
+  },
+  {
+    "nameEn": "Maltepe",
+    "nameKo": "말테페",
+    "countryCode": "tr"
+  },
+  {
+    "nameEn": "Al Kharj",
+    "nameKo": "알하르즈",
+    "countryCode": "sa"
+  },
+  {
+    "nameEn": "Barcelona",
+    "nameKo": "바르셀로나",
+    "countryCode": "ve"
+  },
+  {
+    "nameEn": "Chaozhou",
+    "nameKo": "차오저우",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Xalapa de Enriquez",
+    "nameKo": "할라파데엔리케스",
+    "countryCode": "mx"
+  },
+  {
+    "nameEn": "Ado-Ekiti",
+    "nameKo": "아도에키티",
+    "countryCode": "ng"
+  },
+  {
+    "nameEn": "Gaya",
+    "nameKo": "가야",
+    "countryCode": "in"
+  },
+  {
+    "nameEn": "Udaipur",
+    "nameKo": "우다이푸르",
+    "countryCode": "in"
+  },
+  {
+    "nameEn": "Likasi",
+    "nameKo": "리카시",
+    "countryCode": "cd"
+  },
+  {
+    "nameEn": "Luxor",
+    "nameKo": "룩소르",
+    "countryCode": "eg"
+  },
+  {
+    "nameEn": "Ibague",
+    "nameKo": "이바게",
+    "countryCode": "co"
+  },
+  {
+    "nameEn": "Shaoxing",
+    "nameKo": "사오싱",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Ivanovo",
+    "nameKo": "이바노보",
+    "countryCode": "ru"
+  },
+  {
+    "nameEn": "Erzurum",
+    "nameKo": "에르주룸",
+    "countryCode": "tr"
+  },
+  {
+    "nameEn": "Akure",
+    "nameKo": "아쿠레",
+    "countryCode": "ng"
+  },
+  {
+    "nameEn": "Asyut",
+    "nameKo": "아시우트",
+    "countryCode": "eg"
+  },
+  {
+    "nameEn": "Jambi City",
+    "nameKo": "잠비시",
+    "countryCode": "id"
+  },
+  {
+    "nameEn": "Al Mansurah",
+    "nameKo": "알만수라",
+    "countryCode": "eg"
+  },
+  {
+    "nameEn": "Oakland",
+    "nameKo": "오클랜드",
+    "countryCode": "us"
+  },
+  {
+    "nameEn": "Korba",
+    "nameKo": "코르바",
+    "countryCode": "in"
+  },
+  {
+    "nameEn": "San Juan",
+    "nameKo": "산후안",
+    "countryCode": "pr"
+  },
+  {
+    "nameEn": "Kolwezi",
+    "nameKo": "콜웨지",
+    "countryCode": "cd"
+  },
+  {
+    "nameEn": "Auckland",
+    "nameKo": "오클랜드",
+    "countryCode": "nz"
+  },
+  {
+    "nameEn": "Sukkur",
+    "nameKo": "수쿠르",
+    "countryCode": "pk"
+  },
+  {
+    "nameEn": "Mangalore",
+    "nameKo": "망갈로르",
+    "countryCode": "in"
+  },
+  {
+    "nameEn": "Luohe",
+    "nameKo": "뤄허",
+    "countryCode": "cn"
+  },
+  {
+    "nameEn": "Pasay",
+    "nameKo": "파사이",
+    "countryCode": "ph"
+  },
+  {
+    "nameEn": "Sevastopol",
+    "nameKo": "세바스토폴",
+    "countryCode": "ua"
+  },
+  {
+    "nameEn": "Azcapotzalco",
+    "nameKo": "아스카포찰코",
+    "countryCode": "mx"
+  }
+]
