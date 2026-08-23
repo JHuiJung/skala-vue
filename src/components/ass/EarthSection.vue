@@ -254,6 +254,7 @@ onMounted(() => {
   }
 
   onPointerUp = async () => {
+    if (!isDragging) return
     isDragging = false
 
     const { lat, lon } = getLatLonUnderBread()
