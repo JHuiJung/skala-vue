@@ -24,6 +24,7 @@ const sendRefreshRecommend = () => {
 
 <template>
   <div class="search-bar">
+    <br/>
     <p class="bread-font-h1">🔎 도시 검색</p>
     <div class="search-row">
       <div class="search-input-wrap">

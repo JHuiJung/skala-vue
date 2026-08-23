@@ -1,8 +1,9 @@
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, computed, onMounted } from 'vue'
 import axios from 'axios'
 import { useRoute } from 'vue-router'
 import { useSandwichStore } from '../../stores/sandwich'
+import { BreadState, getBreadState } from '../../constants/breadState'
 import WeatherDetailResultCard from './WeatherDetailResultCard.vue'
 import BaseContentFit from './Slots/BaseContentFit.vue'
 
@@ -74,6 +75,22 @@ onMounted(async () => {
     isLoading.value = false
   }
 })
+
+// 실패 사유 안내 문구 (둘 다 완벽이면 승리 처리되어 이 화면 대신 VictoryView로 이동함)
+const failureReason = computed(() => {
+  if (!selectedCity.value || !oppositeCity.value) return ''
+
+  const selectedState = getBreadState(selectedCity.value)
+  const oppositeState = getBreadState(oppositeCity.value)
+
+  if (selectedState === BreadState.PERFECT && oppositeState === BreadState.PERFECT) {
+    return ''
+  }
+  if (selectedState === oppositeState) {
+    return `두 식빵 모두 ${selectedState} 빵입니다`
+  }
+  return `선택한 도시는 "${selectedState}" 빵, 지구 반대편 도시는 "${oppositeState}" 빵입니다`
+})
 </script>
 
 <template>
@@ -81,11 +98,13 @@ onMounted(async () => {
   <p v-else-if="errorMessage">{{ errorMessage }}</p>
   <BaseContentFit v-else>
     <br/>
+    <p class="bread-font-h1">실패</p>
     <div class="sandwich">
       <WeatherDetailResultCard title="선택한 도시" :city-info="selectedCity" />
       <div class="earth">🌎</div>
       <WeatherDetailResultCard title="지구 반대편 도시" :city-info="oppositeCity" />
     </div>
+    <p v-if="failureReason" class="bread-font failure-reason">{{ failureReason }}</p>
     <br/>
   </BaseContentFit>
 </template>
@@ -101,5 +120,9 @@ onMounted(async () => {
 
 .earth {
   font-size: 2rem;
+}
+
+.failure-reason {
+  margin-top: 16px;
 }
 </style>
