@@ -45,7 +45,7 @@ body {
 .bread-font-light {
   color: var(--bread-fill-color);
   text-shadow: 1px 1px var(--bread-border-color);
-  margin: 0;              /* p 태그 기본 여백 제거 (원할 경우 조정) */
+ text-align: center;
 }
 
 .bread-font{
@@ -63,6 +63,14 @@ body {
 .bread-font-h3{
   color: var(--bread-border-color);
   text-shadow: 1px 1px var(--bread-crust-mid-color);
+  font-size: 2em;
+  margin: 10px 0px 0px 0px;
+  text-align: center;
+}
+
+.bread-font-h3-light{
+  color: var(--bread-fill-color);
+  text-shadow: 1px 1px var(--bread-border-color);
   font-size: 2em;
   margin: 10px 0px 0px 0px;
   text-align: center;

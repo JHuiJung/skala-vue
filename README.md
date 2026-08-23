@@ -52,3 +52,24 @@
 상황 : 지구에 빵을 놓는 연출
 문제: 현재가 아닌 이전에 선택된 기록을 바탕으로 연출하는 상황
 해결 : sandwich store에서 연출중 bool을 통해 연출이 끝나면 함수가 실행되게 함
+
+### 8.23 / 지도 API로 위치 선택하는 MapSection 추가
+
+- 처음엔 지구본 텍스처 이미지를 평면 지도처럼 클릭해서 좌표를 역산하는 방식으로 만들었었는데,
+  실제 지도 API를 써보고 싶어서 Leaflet으로 교체함
+- 지도 API 후보 비교
+  - Leaflet + OpenStreetMap : API 키 발급 없이 바로 사용 가능, Vue 3용 공식 래퍼(`@vue-leaflet/vue-leaflet`) 존재
+  - Mapbox GL / MapLibre GL : 디자인은 더 예쁘지만 API 키 발급(+ 사용량 제한)이 필요해서 제외
+  - Google Maps : 현재 결제(카드 등록) 없이는 API 키 발급이 막혀있어서 제외
+  - -> 지금까지 프로젝트가 무료 API + 최소 설정으로 가는 방향이라 Leaflet 선택
+- 설치: `npm install leaflet @vue-leaflet/vue-leaflet`
+- `MapSection.vue` 생성
+  - `<LMap>` + `<LTileLayer>`(OpenStreetMap 타일) + `<LMarker>`로 지도 렌더링
+  - 지도 클릭 이벤트(`@click`)에서 `event.latlng.lat`, `event.latlng.lng`로 바로 위도/경도를 받음
+    (기존 이미지 클릭 버전처럼 픽셀 좌표 -> 위도/경도 직접 계산할 필요가 없어짐)
+  - 받은 좌표로 EarthSection.vue와 동일한 `fetchWeatherByCoord` 로직을 재사용해 날씨 조회 후 WeatherCard로 표시
+  - HomeView.vue에서 WeatherParent 바로 아래에 배치
+- 트러블 슈팅
+  - 상황 : Vite로 번들링하면 Leaflet 기본 마커 아이콘(마커 png)이 안 뜨는 유명한 이슈가 있음
+  - 문제 : Leaflet이 CSS에서 상대경로로 아이콘 이미지를 찾는데, 번들러가 그 경로를 그대로 못 살려줌
+  - 해결 : `leaflet/dist/images/*.png`를 직접 import해서 `L.Icon.Default.mergeOptions()`로 아이콘 경로를 다시 지정해줌
