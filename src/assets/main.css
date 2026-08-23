@@ -2,6 +2,7 @@
   --bread-border-color: #d9a566;
   --bread-fill-color: #fdf1d6;
   --bread-crust-mid-color: #ebcb9e;
+  --bread-highlight-color: rgb(255, 90, 90);
 
   /* 빵 상태(BreadState)별 카드 배경색 - 기본 fill 색에서 살짝씩만 변형 */
   --bread-state-crispy-color: #f6dfae; /* 탐 - 살짝 진한 토스트색 */

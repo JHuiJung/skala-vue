@@ -44,6 +44,14 @@ const troubleList = [
     solution:
       "leaflet/dist/images/*.png를 직접 import해서 L.Icon.Default.mergeOptions()로 아이콘 경로를 다시 지정해줌",
   },
+  {
+    date: '8/23',
+    situation: '지구본이나 지도를 클릭하면 선택된 도시 카드가 옆에 나타나도록 만듦',
+    problem:
+      '카드가 나타나거나 사라질 때마다 지구본 캔버스가 리사이즈되거나(flex:1이 남는 공간을 다시 계산) 지도가 아래로 밀려서 화면이 덜컹거림',
+    solution:
+      '카드를 "position: fixed"로 문서 흐름 밖에 띄우는 방식으로 바꿔봤지만, 이번엔 스크롤해도 화면에 고정되어 지구본/지도와 따로 노는 문제가 생김. 최종적으로는 지구본 영역·지도 영역에 position: relative를 걸고, 카드는 그 안에서 position: absolute로 (offsetLeft/offsetTop, Leaflet의 containerPoint 기준) 위치를 잡아서 레이아웃을 안 밀고도 스크롤에 같이 따라오게 해결. 지도 위에서는 z-index를 Leaflet 내부 pane보다 높게 줘서 카드가 지도 뒤에 가려지는 것도 같이 고침',
+  },
 ]
 </script>
 
