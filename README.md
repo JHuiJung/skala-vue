@@ -1,7 +1,7 @@
 # 🍞 Earth Sandwich
-
-날씨 API와 3D 지구본을 가지고 놀아보고 싶어서 시작한 SKALA 수업 실습 프로젝트입니다.
 <img width="400" height="204" alt="Image" src="https://github.com/user-attachments/assets/05b3b627-ebc8-43fc-8be9-62cb61bc0df0" />
+
+날씨 API와 Three.js를 활용한 **"지구 샌드위치"** 시뮬레이터
 ## 개요
 
 지구 정반대편에 있는 두 사람이 동시에 빵을 놓아 지구를 샌드위치처럼 만드는 유명한 인터넷 챌린지인
@@ -14,6 +14,7 @@
 
 ## 기능
 <img width="400" height="204" alt="Image" src="https://github.com/user-attachments/assets/6272eb6b-16c2-4b68-b939-cfe651b484cb" />
+
 - 도시 검색 / 추천 카드로 날씨 조회
 - Leaflet 지도를 클릭해서 원하는 위치 선택
 - 선택한 도시 ↔ 지구 반대편(대척점) 도시 날씨 동시 비교
