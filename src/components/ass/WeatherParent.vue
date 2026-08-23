@@ -55,8 +55,8 @@ const fetchWeatherByName = async (capital) => {
   }
 }
 
-// 라이프사이클
-onMounted(async () => {
+// 추천 도시 10개를 랜덤으로 뽑아서 날씨 조회
+const loadRecommendedWeather = async () => {
   isLoading.value = true
 
   const recommendedCapitals = shuffleArray(cityRecomend).slice(0, 10)
@@ -74,11 +74,20 @@ onMounted(async () => {
   } finally {
     isLoading.value = false
   }
+}
+
+// 라이프사이클
+onMounted(() => {
+  loadRecommendedWeather()
 })
 
 //핸들러
 const handleUpdateSearchQuery = (newQuery) => {
   searchQuery.value = newQuery
+}
+
+const handleRefreshRecommend = () => {
+  loadRecommendedWeather()
 }
 
 const handleUpdateSelectedCard = (card) => {
@@ -148,7 +157,11 @@ watch(searchQuery, (newQuery) => {
 <template>
   <BaseContent>
     <BaseDashBoardCard>
-      <SearchBar :search-query="searchQuery" @update-search-query="handleUpdateSearchQuery" />
+      <SearchBar
+        :search-query="searchQuery"
+        @update-search-query="handleUpdateSearchQuery"
+        @refresh-recommend="handleRefreshRecommend"
+      />
     </BaseDashBoardCard>
 
     <BaseDashBoardCard>

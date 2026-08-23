@@ -75,6 +75,11 @@ const handleMoveDetailView = (cityId) => {
   <p class="bread-font-h3-light">🗺️ 지도에서 위치 선택하기</p>
     <p class="bread-font-light">지도를 클릭해서 그 위치의 날씨를 확인해보세요</p>
 
+    <p v-if="isLoading" class="bread-font">도시 조회중</p>
+    <p v-else-if="errorMessage" class="bread-font">{{ errorMessage }}</p>
+    <div v-else-if="selectedCityInfo" class="selected-card">
+      <WeatherCard :city-info="selectedCityInfo" @move-detail-view="handleMoveDetailView" />
+    </div>
     <div class="map-wrap">
       <LMap :zoom="mapZoom" :center="mapCenter" @click="handleMapClick">
         <LTileLayer
@@ -85,11 +90,7 @@ const handleMoveDetailView = (cityId) => {
       </LMap>
     </div>
 
-    <p v-if="isLoading" class="bread-font">도시 조회중</p>
-    <p v-else-if="errorMessage" class="bread-font">{{ errorMessage }}</p>
-    <div v-else-if="selectedCityInfo" class="selected-card">
-      <WeatherCard :city-info="selectedCityInfo" @move-detail-view="handleMoveDetailView" />
-    </div>
+    
     <br/>
     <br/>
 </template>
