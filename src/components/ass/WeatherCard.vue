@@ -2,6 +2,7 @@
 import { useConfigStore } from '../../stores/config'
 import { computed } from 'vue'
 import { getBreadState } from '../../constants/breadState'
+import { getWeatherIcon } from '../../constants/weatherIcon'
 const configStore = useConfigStore()
 
 //props
@@ -34,11 +35,14 @@ const displayTemp = computed(() => {
 })
 
 const breadState = computed(() => getBreadState(props.cityInfo))
+const weatherIcon = computed(() => getWeatherIcon(props.cityInfo.status))
 </script>
 <template>
   <div class="weather-card" @click.stop="sendUpdateSelectCard(cityInfo.nameKo)">
     <div class="weather-card-content">
+      <img v-if="cityInfo.status" class="weather-icon" :src="weatherIcon" :alt="cityInfo.status" />
       <p v-if="cityInfo.countryCode" class="country-code">{{ cityInfo.countryCode }}</p>
+      <br/>
       <h3 class="city-row">
         <img
           v-if="cityInfo.countryCode"
@@ -50,7 +54,7 @@ const breadState = computed(() => getBreadState(props.cityInfo))
       </h3>
       <h1 class="temp">{{ displayTemp }}{{ configStore.unitSymbol }}</h1>
       <p class="humid">습도 {{ cityInfo.humid }}%</p>
-      <p class="bread-state bread-tag">🍞 {{ breadState }}</p>
+      <p class="bread-state">🍞 {{ breadState }} 빵</p>
       <button class="bread-btn" @click.stop="sendMoveDetailView(cityInfo.id)">빵 선택</button>
     </div>
   </div>
@@ -103,6 +107,14 @@ const breadState = computed(() => getBreadState(props.cityInfo))
   left: 0px;
 }
 
+.weather-icon {
+  position: absolute;
+  top: 8px;
+  left: 12px;
+  width: 25px;
+  height: 25px;
+}
+
 .country-code {
   position: absolute;
   top: 8px;
@@ -135,14 +147,6 @@ const breadState = computed(() => getBreadState(props.cityInfo))
 .bread-state {
   margin: 2px 0;
   font-size: 0.9rem;
-}
-
-.bread-tag {
-  color: var(--bread-fill-color);
-  background-color: var(--bread-border-color);
-  border-radius: 15px;
-  display: inline-block;
-  padding: 5px 10px;
 }
 
 .bread-btn {

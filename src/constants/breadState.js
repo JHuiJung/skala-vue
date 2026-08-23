@@ -1,9 +1,9 @@
 export const BreadState = Object.freeze({
-  CRISPY: '탐',
-  DRY: '마름',
-  SOGGY: '눅눅',
-  FROZEN: '꽁꽁얼음',
-  PERFECT: '완벽',
+  CRISPY: '탄',
+  DRY: '마른',
+  SOGGY: '눅눅한',
+  FROZEN: '꽁꽁얼은',
+  PERFECT: '완벽한',
 })
 
 export function getBreadState({ temp, humid, nameEn }) {

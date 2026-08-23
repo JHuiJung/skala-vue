@@ -10,6 +10,8 @@ import UnitBottomInfo from './components/ass/units/UnitBottomInfo.vue';
     <nav class="nav-menu">
       <RouterLink to="/" class="nav-link">Home</RouterLink>
       <RouterLink to="/about" class="nav-link">About</RouterLink>
+      <RouterLink to="/practice" class="nav-link">Practice</RouterLink>
+      <RouterLink to="/troubleshooting" class="nav-link">Troubleshooting</RouterLink>
     </nav>
     <UnitToggler />
   </header>

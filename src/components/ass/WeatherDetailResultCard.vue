@@ -2,6 +2,7 @@
 import { useConfigStore } from '../../stores/config'
 import { computed } from 'vue'
 import { BreadState, getBreadState } from '../../constants/breadState'
+import { getWeatherIcon } from '../../constants/weatherIcon'
 const configStore = useConfigStore()
 
 const stateClassMap = {
@@ -34,6 +35,7 @@ const displayTemp = computed(() => {
 
 const breadState = computed(() => getBreadState(props.cityInfo))
 const stateClass = computed(() => stateClassMap[breadState.value])
+const weatherIcon = computed(() => getWeatherIcon(props.cityInfo.status))
 </script>
 
 <template>
@@ -41,7 +43,9 @@ const stateClass = computed(() => stateClassMap[breadState.value])
     <p class="bread-font-h3 result-title">{{ title }}</p>
     <div class="weather-card">
       <div class="weather-card-content" :class="stateClass">
+        <img v-if="cityInfo.status" class="weather-icon" :src="weatherIcon" :alt="cityInfo.status" />
         <p v-if="cityInfo.countryCode" class="country-code">{{ cityInfo.countryCode }}</p>
+        <br>
         <h3 class="city-row">
           <img
             v-if="cityInfo.countryCode"
@@ -53,7 +57,7 @@ const stateClass = computed(() => stateClassMap[breadState.value])
         </h3>
         <h1 class="temp">{{ displayTemp }}{{ configStore.unitSymbol }}</h1>
         <p class="humid">습도 {{ cityInfo.humid }}%</p>
-        <p class="bread-state bread-tag">🍞 {{ breadState }}</p>
+        <p class="bread-state">🍞 {{ breadState }} 빵</p>
         <p class="coord">위도 {{ cityInfo.lat }}, 경도 {{ cityInfo.lon }}</p>
       </div>
     </div>
@@ -125,6 +129,14 @@ const stateClass = computed(() => stateClassMap[breadState.value])
   --card-tint: var(--bread-state-perfect-color);
 }
 
+.weather-icon {
+  position: absolute;
+  top: 8px;
+  left: 12px;
+  width: 20px;
+  height: 20px;
+}
+
 .country-code {
   position: absolute;
   top: 8px;
@@ -157,14 +169,6 @@ const stateClass = computed(() => stateClassMap[breadState.value])
 .bread-state {
   margin: 2px 0;
   font-size: 0.9rem;
-}
-
-.bread-tag {
-  color: var(--bread-fill-color);
-  background-color: var(--bread-border-color);
-  border-radius: 15px;
-  display: inline-block;
-  padding: 5px 10px;
 }
 
 .coord {
