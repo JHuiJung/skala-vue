@@ -2,8 +2,7 @@
 import { ref, watchEffect, computed, watch, onMounted } from 'vue'
 import axios from 'axios'
 import { useRouter } from 'vue-router'
-import cityRecomend from '../../assets/data/cityRecomend.json'
-import cities1000 from '../../assets/data/cities-1000.json'
+import cities from '../../assets/data/cities.json'
 import BaseDashBoardCard from './Slots/BaseDashBoardCard.vue'
 import BaseContent from './Slots/BaseContent.vue'
 import SearchBar from './SearchBar.vue'
@@ -19,7 +18,7 @@ const searchResultList = ref([])
 const isSearchNoMatch = ref(false)
 const isSearchLoading = ref(false)
 
-const cityDatabase = [...cityRecomend, ...cities1000]
+const cityDatabase = cities
 
 const displayWeatherList = computed(() => {
   if (searchQuery.value === '') return weatherList.value
@@ -59,7 +58,7 @@ const fetchWeatherByName = async (capital) => {
 const loadRecommendedWeather = async () => {
   isLoading.value = true
 
-  const recommendedCapitals = shuffleArray(cityRecomend).slice(0, 10)
+  const recommendedCapitals = shuffleArray(cities).slice(0, 10)
 
   try {
     // 10개를 동시에 병렬 요청
