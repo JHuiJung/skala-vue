@@ -1,11 +1,13 @@
 <script setup>
 import { ref, onMounted, onBeforeUnmount, watch } from 'vue'
 import * as THREE from 'three'
+import { useRouter } from 'vue-router'
 import { useSandwichStore } from '../../stores/sandwich'
 import { BreadState, getBreadState } from '../../constants/breadState'
 import earthTextureUrl from '../../assets/img/earth_day_4096.jpg'
 import earthNormalMapUrl from '../../assets/img/earth_normal_map.png'
 
+const router = useRouter()
 const sandwichStore = useSandwichStore()
 const canvasContainer = ref(null)
 
@@ -174,6 +176,16 @@ const playCutscene = async () => {
   )
 
   sandwichStore.isCutscenePlaying = false
+
+  // 승리 조건: 두 도시 모두 식빵 상태가 완벽일 때 - 연출이 끝난 시점에 판정
+  const isVictory =
+    getBreadState(selected) === BreadState.PERFECT && getBreadState(opposite) === BreadState.PERFECT
+
+  if (isVictory) {
+    sandwichStore.victoryCount = sandwichStore.count
+    sandwichStore.gameClear = true
+    router.push('/victory')
+  }
 }
 
 onMounted(() => {

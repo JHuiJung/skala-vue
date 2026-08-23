@@ -60,6 +60,13 @@ body {
   margin: 20px 0px 0px 0px;
 }
 
+.bread-font-h1-light{
+  color: var(--bread-fill-color);
+  text-shadow: 2px 2px var(--bread-border-color);
+  font-size: 3em;
+  margin: 20px 0px 0px 0px;
+}
+
 .bread-font-h3{
   color: var(--bread-border-color);
   text-shadow: 1px 1px var(--bread-crust-mid-color);

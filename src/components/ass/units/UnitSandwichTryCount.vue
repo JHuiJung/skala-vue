@@ -7,8 +7,15 @@ const sandwichStore = useSandwichStore()
 <template>
 
     <div class="bread-cnt-area">
-        <p class="bread-font-light">시도 횟수</p>
-        <p class="bread-font-try-cnt">{{ sandwichStore.count }}</p>
+        <template v-if="sandwichStore.gameClear">
+          <p class="bread-font-light">성공</p>
+          <p class="bread-font-light">시도횟수</p>
+          <p class="bread-font-try-cnt">{{ sandwichStore.victoryCount }}</p>
+        </template>
+        <template v-else>
+          <p class="bread-font-light">시도 횟수</p>
+          <p class="bread-font-try-cnt">{{ sandwichStore.count }}</p>
+        </template>
     </div>
 </template>
 <style>

@@ -7,7 +7,8 @@ export const useSandwichStore = defineStore('sandwich', () => {
   const log = ref([])
   const count = ref(0)
   const gameClear = ref(false)
+  const victoryCount = ref(null)
   const isCutscenePlaying = ref(false)
 
-  return { selectedCity, oppositeCity, log, count, gameClear, isCutscenePlaying }
+  return { selectedCity, oppositeCity, log, count, gameClear, victoryCount, isCutscenePlaying }
 })
