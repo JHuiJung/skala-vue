@@ -5,6 +5,7 @@ import axios from 'axios'
 import { useRouter } from 'vue-router'
 import { useSandwichStore } from '../../stores/sandwich'
 import earthTextureUrl from '../../assets/img/earth_day_4096.jpg'
+import earthNormalMapUrl from '../../assets/img/earth_normal_map.png'
 import WeatherCard from './WeatherCard.vue'
 
 const router = useRouter()
@@ -19,6 +20,7 @@ let renderer,
   resizeObserver,
   earth,
   earthTexture,
+  earthNormalTexture,
   earthGeometry,
   earthMaterial,
   bread,
@@ -144,8 +146,14 @@ onMounted(() => {
   earthTexture = new THREE.TextureLoader().load(earthTextureUrl)
   earthTexture.colorSpace = THREE.SRGBColorSpace
 
+  earthNormalTexture = new THREE.TextureLoader().load(earthNormalMapUrl)
+
   earthGeometry = new THREE.SphereGeometry(1, 64, 64)
-  earthMaterial = new THREE.MeshPhongMaterial({ map: earthTexture })
+  earthMaterial = new THREE.MeshPhongMaterial({
+    map: earthTexture,
+    normalMap: earthNormalTexture,
+    normalScale: new THREE.Vector2(3, 3),
+  })
   earth = new THREE.Mesh(earthGeometry, earthMaterial)
   scene.add(earth)
 
@@ -257,6 +265,7 @@ onBeforeUnmount(() => {
   earthGeometry?.dispose()
   earthMaterial?.dispose()
   earthTexture?.dispose()
+  earthNormalTexture?.dispose()
   breadGeometry?.dispose()
   breadMaterial?.forEach((material) => material.dispose())
   surfaceBreadMeshes?.forEach(({ geometry, material }) => {
@@ -271,24 +280,23 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <el-card class="earth-section" shadow="hover">
+  <div class="earth-section">
     <div class="earth-layout">
       <div ref="canvasContainer" class="earth-canvas"></div>
       <div v-if="selectedCityInfo" class="selected-card">
         <WeatherCard :city-info="selectedCityInfo" @move-detail-view="handleMoveDetailView" />
       </div>
     </div>
-    <p class="earth-caption">
-      🌍 지구를 잡고 돌려서 원하는 위치에 놓아보세요 — 놓은 자리의 날씨가 옆에 나타납니다
+    <p class="earth-caption bread-font-light">
+      🌍 지구를 잡고 돌려서 원하는 위치에 놓아보세요 <br/> 놓은 자리의 날씨가 옆에 나타납니다
     </p>
-  </el-card>
+  </div>
 </template>
 
 <style scoped>
 .earth-section {
   margin: 16px auto;
   max-width: 1200px;
-  border-color: var(--bread-border-color);
   text-align: center;
 }
 
@@ -317,6 +325,5 @@ onBeforeUnmount(() => {
 
 .earth-caption {
   margin-top: 12px;
-  color: var(--bread-border-color);
 }
 </style>

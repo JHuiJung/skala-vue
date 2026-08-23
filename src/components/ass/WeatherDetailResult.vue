@@ -5,6 +5,7 @@ import { useRoute } from 'vue-router'
 import { useSandwichStore } from '../../stores/sandwich'
 import { BreadState, getBreadState } from '../../constants/breadState'
 import WeatherDetailResultCard from './WeatherDetailResultCard.vue'
+import BaseContent from './Slots/BaseContent.vue'
 
 const route = useRoute()
 const sandwichStore = useSandwichStore()
@@ -86,12 +87,13 @@ onMounted(async () => {
 <template>
   <p v-if="isLoading">불러오는 중...</p>
   <p v-else-if="errorMessage">{{ errorMessage }}</p>
-
-  <div v-else class="sandwich">
-    <WeatherDetailResultCard title="📍 선택한 도시" :city-info="selectedCity" />
-    <div class="earth">🌎</div>
-    <WeatherDetailResultCard title="🌏 지구 반대편 도시" :city-info="oppositeCity" />
-  </div>
+  <BaseContent v-else>
+    <div class="sandwich">
+      <WeatherDetailResultCard title="📍 선택한 도시" :city-info="selectedCity" />
+      <div class="earth">🌎</div>
+      <WeatherDetailResultCard title="🌏 지구 반대편 도시" :city-info="oppositeCity" />
+    </div>
+  </BaseContent>
 </template>
 
 <style scoped>

@@ -51,14 +51,14 @@ const breadState = computed(() => getBreadState(props.cityInfo))
       <h1 class="temp">{{ displayTemp }}{{ configStore.unitSymbol }}</h1>
       <p class="humid">습도 {{ cityInfo.humid }}%</p>
       <p class="bread-state bread-tag">🍞 {{ breadState }}</p>
-      <button class="bread-btn" @click.stop="sendMoveDetailView(cityInfo.id)">상세 정보</button>
+      <button class="bread-btn" @click.stop="sendMoveDetailView(cityInfo.id)">빵 선택</button>
     </div>
   </div>
 </template>
 <style scoped>
 .weather-card {
   position: relative; /* 자식 요소의 위치 기준점 설정 */
-  width: 90%;
+  width: 200px;
   aspect-ratio: 4 / 4.5;
   padding: 0px 0px 10px 0px;
   background-color: var(--bread-border-color);
@@ -72,6 +72,14 @@ const breadState = computed(() => getBreadState(props.cityInfo))
   width: 100%;
   height: 100%;
   background-color: var(--bread-fill-color);
+  background-image: radial-gradient(
+      circle,
+      rgba(253, 241, 214, 1) 0%,
+      rgba(253, 241, 214, 0.7) 100%
+    ),
+    url('../../assets/img/img_Bread_Texture.png');
+  background-size: cover;
+  background-position: center;
   border: 5px solid var(--bread-border-color);
   border-radius: 30px;
   text-align: center;
@@ -138,19 +146,27 @@ const breadState = computed(() => getBreadState(props.cityInfo))
 }
 
 .bread-btn {
+  font-family: 'Jua', sans-serif;
+  font-size: 0.85rem;
+  white-space: nowrap;
   color: var(--bread-fill-color);
   background-color: var(--bread-border-color);
-  border-radius: 15px;
+  border-radius: 25px;
   display: block;
-  padding: 5px 10px;
+  padding: 10px 15px;
 
   /* 위치 설정 */
   position: absolute;
-  bottom: 5px; /* 바닥에서 5px 위로 띄움 */
+  bottom: 10px; /* 바닥에서 5px 위로 띄움 */
   left: 50%;
   transform: translateX(-50%); /* 가로 중앙 정렬 */
 
   border: none;
   cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.bread-btn:hover {
+  background-color: var(--bread-crust-mid-color);
 }
 </style>

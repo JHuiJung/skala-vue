@@ -18,7 +18,7 @@ const sendNotification = (newQuery) => {
 
 <template>
   <div class="search-bar">
-    <h3>🔎 도시 검색</h3>
+    <p class="bread-font-h1">🔎 도시 검색</p>
     <div class="search-input-wrap">
       <span class="search-icon">🔍</span>
       <input
@@ -58,6 +58,7 @@ const sendNotification = (newQuery) => {
 
 .search-input {
   width: 100%;
+  color: var(--bread-border-color);
   box-sizing: border-box;
   padding: 8px 30px 8px 30px;
   border: 1px solid var(--bread-border-color);

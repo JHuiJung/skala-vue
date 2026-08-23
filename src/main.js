@@ -15,4 +15,4 @@ app.use(createPinia())
 app.use(router)
 app.use(ElementPlus)
 
-app.mount('#app') // 화면에 렌더링
+app.mount('#app')

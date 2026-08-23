@@ -4,15 +4,13 @@ import axios from 'axios'
 import { useRouter } from 'vue-router'
 import cityRecomend from '../../assets/data/cityRecomend.json'
 import cities1000 from '../../assets/data/cities-1000.json'
-
-import { useSandwichStore } from '../../stores/sandwich'
-import BaseDashBoardCard from './BaseDashBoardCard.vue'
+import BaseDashBoardCard from './Slots/BaseDashBoardCard.vue'
+import BaseContent from './Slots/BaseContent.vue'
 import SearchBar from './SearchBar.vue'
 import WeatherCard from './WeatherCard.vue'
 
 // 변수
 const router = useRouter()
-const sandwichStore = useSandwichStore()
 const searchQuery = ref('')
 const selectedCard = ref('')
 const isLoading = ref(false)
@@ -148,29 +146,36 @@ watch(searchQuery, (newQuery) => {
 })
 </script>
 <template>
-  <p v-if="sandwichStore.gameClear" class="game-clear">🎉 {{ sandwichStore.count }}번만에 승리!</p>
-  <p v-else>🥪 현재 시도 횟수: {{ sandwichStore.count }}</p>
+  <BaseContent>
+    <BaseDashBoardCard>
+      <SearchBar :search-query="searchQuery" @update-search-query="handleUpdateSearchQuery" />
+    </BaseDashBoardCard>
 
-  <BaseDashBoardCard>
-    <SearchBar :search-query="searchQuery" @update-search-query="handleUpdateSearchQuery" />
-  </BaseDashBoardCard>
+    <BaseDashBoardCard>
+      <template v-if="selectedCard != ''">
+        <p class="bread-font-h3">{{ selectedCard }}</p>
+        <p class="bread-font">선택됨</p>
+      </template>
+      <p v-else class="bread-font">카드를 클릭하거나 검색해 보세요</p>
+      <p v-if="isSearchNoMatch">매칭되는 도시가 없습니다</p>
+      <p v-else-if="isSearchLoading">도시 검색중</p>
+      <div v-else class="weather-grid">
+        <WeatherCard
+          v-for="cityInfo in displayWeatherList"
+          :key="cityInfo.id"
+          :city-info="cityInfo"
+          @update-selected-card="handleUpdateSelectedCard"
+          @move-detail-view="handleMoveDetailView"
+        />
+      </div>
+    </BaseDashBoardCard>
 
-  <BaseDashBoardCard>
-    <h3>🏙️ 지역별 날씨 현황</h3>
-    <p v-if="selectedCard != ''">{{ selectedCard }}가 선택됨</p>
-    <p v-else>카드를 클릭하거나 검색해 보세요</p>
-    <p v-if="isSearchNoMatch">매칭되는 도시가 없습니다</p>
-    <p v-else-if="isSearchLoading">도시 검색중</p>
-    <div v-else class="weather-grid">
-      <WeatherCard
-        v-for="cityInfo in displayWeatherList"
-        :key="cityInfo.id"
-        :city-info="cityInfo"
-        @update-selected-card="handleUpdateSelectedCard"
-        @move-detail-view="handleMoveDetailView"
-      />
-    </div>
-  </BaseDashBoardCard>
+    <br/>
+    <br/>
+  </BaseContent>
+
+  
+  
 </template>
 <style scoped>
 .game-clear {
@@ -181,6 +186,7 @@ watch(searchQuery, (newQuery) => {
 .weather-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
+  place-items: center;
   gap: 12px;
 }
 
