@@ -7,11 +7,14 @@ import { useSandwichStore } from '../../stores/sandwich'
 import { BreadState, getBreadState } from '../../constants/breadState'
 import earthTextureUrl from '../../assets/img/earth_day_4096.jpg'
 import earthNormalMapUrl from '../../assets/img/earth_normal_map.png'
-import WeatherCard from './WeatherCard.vue'
+import FloatingWeatherCard from './FloatingWeatherCard.vue'
 
 const router = useRouter()
 const sandwichStore = useSandwichStore()
 const canvasContainer = ref(null)
+const earthLayout = ref(null)
+const cardPosition = ref({ x: 0, y: 0 })
+const cardBounds = ref({ width: Infinity, height: Infinity })
 const selectedCityInfo = ref(null)
 
 let renderer,
@@ -257,6 +260,17 @@ onMounted(() => {
     if (!isDragging) return
     isDragging = false
 
+    // 지구 옆에 카드가 뜨도록 위치 계산 - offsetLeft/Top은 가장 가까운 position:relative
+    // 조상(earth-layout) 기준이라, 스크롤해도 지구 옆자리에 그대로 붙어있게 됨
+    cardPosition.value = {
+      x: canvasContainer.value.offsetLeft + canvasContainer.value.offsetWidth + 16,
+      y: canvasContainer.value.offsetTop,
+    }
+    cardBounds.value = {
+      width: earthLayout.value.clientWidth,
+      height: earthLayout.value.clientHeight,
+    }
+
     const { lat, lon } = getLatLonUnderBread()
     try {
       selectedCityInfo.value = await fetchWeatherByCoord(lat, lon)
@@ -314,11 +328,16 @@ onBeforeUnmount(() => {
 
 <template>
   <div class="earth-section">
-    <div class="earth-layout">
+    <div ref="earthLayout" class="earth-layout">
       <div ref="canvasContainer" class="earth-canvas"></div>
-      <div v-if="selectedCityInfo" class="selected-card">
-        <WeatherCard :city-info="selectedCityInfo" @move-detail-view="handleMoveDetailView" />
-      </div>
+      <FloatingWeatherCard
+        :city-info="selectedCityInfo"
+        :x="cardPosition.x"
+        :y="cardPosition.y"
+        :bounds-width="cardBounds.width"
+        :bounds-height="cardBounds.height"
+        @move-detail-view="handleMoveDetailView"
+      />
     </div>
     <p class="earth-caption bread-font-light">
       🌍 지구를 잡고 돌려서 원하는 위치에 놓아보세요 <br/> 놓은 자리의 날씨가 옆에 나타납니다
@@ -334,6 +353,7 @@ onBeforeUnmount(() => {
 }
 
 .earth-layout {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -348,9 +368,6 @@ onBeforeUnmount(() => {
   cursor: grab;
 }
 
-.selected-card {
-  width: 240px;
-}
 
 .earth-canvas:active {
   cursor: grabbing;

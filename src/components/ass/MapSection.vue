@@ -5,7 +5,7 @@ import { useRouter } from 'vue-router'
 import L from 'leaflet'
 import 'leaflet/dist/leaflet.css'
 import { LMap, LTileLayer, LMarker } from '@vue-leaflet/vue-leaflet'
-import WeatherCard from './WeatherCard.vue'
+import FloatingWeatherCard from './FloatingWeatherCard.vue'
 
 // Vite 번들링 환경에서 Leaflet 기본 마커 아이콘 경로가 깨지는 문제 우회
 import markerIcon2x from 'leaflet/dist/images/marker-icon-2x.png'
@@ -26,6 +26,9 @@ const markerLatLng = ref(null)
 const selectedCityInfo = ref(null)
 const isLoading = ref(false)
 const errorMessage = ref('')
+const mapWrap = ref(null)
+const cardPosition = ref({ x: 0, y: 0 })
+const cardBounds = ref({ width: Infinity, height: Infinity })
 
 // 위도, 경도로 도시 날씨 조회 (EarthSection.vue와 동일한 로직)
 const fetchWeatherByCoord = async (lat, lon) => {
@@ -48,6 +51,10 @@ const fetchWeatherByCoord = async (lat, lon) => {
 const handleMapClick = async (event) => {
   const { lat, lng } = event.latlng
   markerLatLng.value = [lat, lng]
+
+  // containerPoint는 지도 컨테이너(map-wrap) 내부 기준 좌표라, 스크롤해도 클릭한 지점 옆에 그대로 붙어있게 됨
+  cardPosition.value = { x: event.containerPoint.x + 16, y: event.containerPoint.y + 16 }
+  cardBounds.value = { width: mapWrap.value.clientWidth, height: mapWrap.value.clientHeight }
 
   isLoading.value = true
   errorMessage.value = ''
@@ -77,10 +84,7 @@ const handleMoveDetailView = (cityId) => {
 
     <p v-if="isLoading" class="bread-font">도시 조회중</p>
     <p v-else-if="errorMessage" class="bread-font">{{ errorMessage }}</p>
-    <div v-else-if="selectedCityInfo" class="selected-card">
-      <WeatherCard :city-info="selectedCityInfo" @move-detail-view="handleMoveDetailView" />
-    </div>
-    <div class="map-wrap">
+    <div ref="mapWrap" class="map-wrap">
       <LMap :zoom="mapZoom" :center="mapCenter" @click="handleMapClick">
         <LTileLayer
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -88,9 +92,16 @@ const handleMoveDetailView = (cityId) => {
         />
         <LMarker v-if="markerLatLng" :lat-lng="markerLatLng" />
       </LMap>
+      <FloatingWeatherCard
+        :city-info="selectedCityInfo"
+        :x="cardPosition.x"
+        :y="cardPosition.y"
+        :bounds-width="cardBounds.width"
+        :bounds-height="cardBounds.height"
+        @move-detail-view="handleMoveDetailView"
+      />
     </div>
 
-    
     <br/>
     <br/>
 </template>
@@ -106,8 +117,4 @@ const handleMoveDetailView = (cityId) => {
   overflow: hidden;
 }
 
-.selected-card {
-  width: 220px;
-  margin: 16px auto 0;
-}
 </style>
