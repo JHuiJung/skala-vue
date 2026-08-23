@@ -1,4 +1,7 @@
 # 🍞 Earth Sandwich
+
+🔗 https://www.youtube.com/watch?v=Jt6AQawsTv0
+
 <img width="400" height="204" alt="Image" src="https://github.com/user-attachments/assets/05b3b627-ebc8-43fc-8be9-62cb61bc0df0" />
 
 날씨 API와 Three.js를 활용한 **"지구 샌드위치"** 시뮬레이터
