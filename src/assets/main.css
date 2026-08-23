@@ -2,6 +2,20 @@
   --bread-border-color: #d9a566;
   --bread-fill-color: #fdf1d6;
   --bread-crust-mid-color: #ebcb9e;
+
+  /* 빵 상태(BreadState)별 카드 배경색 - 기본 fill 색에서 살짝씩만 변형 */
+  --bread-state-crispy-color: #f6dfae; /* 탐 - 살짝 진한 토스트색 */
+  --bread-state-dry-color: #f4ead2; /* 마름 - 채도 낮춘 베이지 */
+  --bread-state-soggy-color: #e8ecd7; /* 눅눅 - 살짝 축축한 그린빛 */
+  --bread-state-frozen-color: #e3eef5; /* 꽁꽁얼음 - 차가운 하늘빛 */
+  --bread-state-perfect-color: #fdf1d6; /* 완벽 - 기본 fill 색 */
+
+  /* 지구 표면에 붙는 빵 조각용 색 - 3D 조명 아래에서도 티나게 카드색보다 훨씬 진하고 채도 높게 */
+  --bread-surface-crispy-color: #c8863a; /* 탐 - 진한 토스트 갈색 */
+  --bread-surface-dry-color: #d9c48c; /* 마름 - 푸석한 탁한 베이지 */
+  --bread-surface-soggy-color: #7c9a68; /* 눅눅 - 축축한 올리브그린 */
+  --bread-surface-frozen-color: #7fc4e0; /* 꽁꽁얼음 - 선명한 얼음색 */
+  --bread-surface-perfect-color: #f0c975; /* 완벽 - 진한 황금빛 빵색 */
 }
 
 .jua-regular {
@@ -19,6 +33,13 @@ body {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+}
+
+/* 콘텐츠가 짧아도 bottom-info가 화면 바닥에 붙도록 하는 sticky-footer 레이아웃 */
+#app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .bread-font-light {

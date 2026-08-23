@@ -16,7 +16,7 @@ const backToMain = () => router.push('/')
 {
   display: block;
   width: fit-content;
-  margin: 100px auto 0;
+  margin: 100px auto 100px;
   background-color: var(--bread-border-color);
   border-radius: 25px;
 }

@@ -2,6 +2,7 @@
 import { ref, onMounted, onBeforeUnmount, watch } from 'vue'
 import * as THREE from 'three'
 import { useSandwichStore } from '../../stores/sandwich'
+import { BreadState, getBreadState } from '../../constants/breadState'
 import earthTextureUrl from '../../assets/img/earth_day_4096.jpg'
 import earthNormalMapUrl from '../../assets/img/earth_normal_map.png'
 
@@ -57,6 +58,23 @@ const latLonToLocalDirection = (lat, lon) => {
     Math.cos(theta),
     ringRadius * Math.sin(phi),
   )
+}
+
+// 빵 상태(BreadState) -> main.css에 정의된 표면 빵 전용 색 변수 이름
+const breadStateColorVarMap = {
+  [BreadState.CRISPY]: '--bread-surface-crispy-color',
+  [BreadState.DRY]: '--bread-surface-dry-color',
+  [BreadState.SOGGY]: '--bread-surface-soggy-color',
+  [BreadState.FROZEN]: '--bread-surface-frozen-color',
+  [BreadState.PERFECT]: '--bread-surface-perfect-color',
+}
+
+// 도시 정보(온도/습도)로 빵 상태를 판정해서 그에 맞는 표면 빵 색을 가져옴
+const getBreadFillColorForCity = (cityInfo, fallbackColor) => {
+  const state = getBreadState(cityInfo)
+  const varName = breadStateColorVarMap[state]
+  const rootStyles = getComputedStyle(document.documentElement)
+  return rootStyles.getPropertyValue(varName).trim() || fallbackColor
 }
 
 // 지구 표면에 눌러붙는 작은 빵 조각 (지구의 자식으로 붙여서 자전에 같이 따라감)
@@ -140,10 +158,20 @@ const playCutscene = async () => {
   sandwichStore.isCutscenePlaying = true
 
   await rotateEarthToFace(selected.lat, selected.lon)
-  await dropBreadOnto(selected.lat, selected.lon, breadFillColor, breadBorderColor)
+  await dropBreadOnto(
+    selected.lat,
+    selected.lon,
+    getBreadFillColorForCity(selected, breadFillColor),
+    breadBorderColor,
+  )
 
   await rotateEarthToFace(opposite.lat, opposite.lon)
-  await dropBreadOnto(opposite.lat, opposite.lon, breadFillColor, breadBorderColor)
+  await dropBreadOnto(
+    opposite.lat,
+    opposite.lon,
+    getBreadFillColorForCity(opposite, breadFillColor),
+    breadBorderColor,
+  )
 
   sandwichStore.isCutscenePlaying = false
 }
@@ -186,10 +214,20 @@ onMounted(() => {
   // (WeatherDetailView에서 EarthSectionForDetail을 앞에 배치) 여기 있는 log는 "이전" 기록만 담고 있음
   sandwichStore.log.forEach((entry) => {
     earth.add(
-      createSurfaceBread(entry.selectedCity.lat, entry.selectedCity.lon, breadFillColor, breadBorderColor),
+      createSurfaceBread(
+        entry.selectedCity.lat,
+        entry.selectedCity.lon,
+        getBreadFillColorForCity(entry.selectedCity, breadFillColor),
+        breadBorderColor,
+      ),
     )
     earth.add(
-      createSurfaceBread(entry.oppositeCity.lat, entry.oppositeCity.lon, breadFillColor, breadBorderColor),
+      createSurfaceBread(
+        entry.oppositeCity.lat,
+        entry.oppositeCity.lon,
+        getBreadFillColorForCity(entry.oppositeCity, breadFillColor),
+        breadBorderColor,
+      ),
     )
   })
 

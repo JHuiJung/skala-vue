@@ -88,11 +88,13 @@ onMounted(async () => {
   <p v-if="isLoading">불러오는 중...</p>
   <p v-else-if="errorMessage">{{ errorMessage }}</p>
   <BaseContent v-else>
+    <br/>
     <div class="sandwich">
-      <WeatherDetailResultCard title="📍 선택한 도시" :city-info="selectedCity" />
+      <WeatherDetailResultCard title="선택한 도시" :city-info="selectedCity" />
       <div class="earth">🌎</div>
-      <WeatherDetailResultCard title="🌏 지구 반대편 도시" :city-info="oppositeCity" />
+      <WeatherDetailResultCard title="지구 반대편 도시" :city-info="oppositeCity" />
     </div>
+    <br/>
   </BaseContent>
 </template>
 

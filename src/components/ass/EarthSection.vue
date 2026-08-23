@@ -4,6 +4,7 @@ import * as THREE from 'three'
 import axios from 'axios'
 import { useRouter } from 'vue-router'
 import { useSandwichStore } from '../../stores/sandwich'
+import { BreadState, getBreadState } from '../../constants/breadState'
 import earthTextureUrl from '../../assets/img/earth_day_4096.jpg'
 import earthNormalMapUrl from '../../assets/img/earth_normal_map.png'
 import WeatherCard from './WeatherCard.vue'
@@ -64,6 +65,23 @@ const latLonToLocalDirection = (lat, lon) => {
     Math.cos(theta),
     ringRadius * Math.sin(phi),
   )
+}
+
+// 빵 상태(BreadState) -> main.css에 정의된 표면 빵 전용 색 변수 이름
+const breadStateColorVarMap = {
+  [BreadState.CRISPY]: '--bread-surface-crispy-color',
+  [BreadState.DRY]: '--bread-surface-dry-color',
+  [BreadState.SOGGY]: '--bread-surface-soggy-color',
+  [BreadState.FROZEN]: '--bread-surface-frozen-color',
+  [BreadState.PERFECT]: '--bread-surface-perfect-color',
+}
+
+// 도시 정보(온도/습도)로 빵 상태를 판정해서 그에 맞는 표면 빵 색을 가져옴
+const getBreadFillColorForCity = (cityInfo, fallbackColor) => {
+  const state = getBreadState(cityInfo)
+  const varName = breadStateColorVarMap[state]
+  const rootStyles = getComputedStyle(document.documentElement)
+  return rootStyles.getPropertyValue(varName).trim() || fallbackColor
 }
 
 // 지구 표면에 눌러붙는 작은 빵 조각 (지구의 자식으로 붙여서 자전에 같이 따라감)
@@ -182,8 +200,22 @@ onMounted(() => {
 
   // 지금까지의 시도 기록을 지구 표면에 재현 - 시도할수록 지구가 빵으로 뒤덮임
   sandwichStore.log.forEach((entry) => {
-    earth.add(createSurfaceBread(entry.selectedCity.lat, entry.selectedCity.lon, breadFillColor, breadBorderColor))
-    earth.add(createSurfaceBread(entry.oppositeCity.lat, entry.oppositeCity.lon, breadFillColor, breadBorderColor))
+    earth.add(
+      createSurfaceBread(
+        entry.selectedCity.lat,
+        entry.selectedCity.lon,
+        getBreadFillColorForCity(entry.selectedCity, breadFillColor),
+        breadBorderColor,
+      ),
+    )
+    earth.add(
+      createSurfaceBread(
+        entry.oppositeCity.lat,
+        entry.oppositeCity.lon,
+        getBreadFillColorForCity(entry.oppositeCity, breadFillColor),
+        breadBorderColor,
+      ),
+    )
   })
 
   // 빵 -> 지구 표면을 잇는 움직이는 점선 (지구에서도 선택할 수 있음을 보여주는 타겟팅 라인)

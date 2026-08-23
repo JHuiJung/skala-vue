@@ -18,8 +18,10 @@
   background-size: cover;
   background-position: center;
   border-radius: 25px 25px 0px 0px;
+  width: 100%;
   max-width: 1200px;
-  margin: 100px auto 0;
+  /* 위쪽 auto margin이 flex 컬럼에서 남는 공간을 다 먹어서 콘텐츠가 적을 때도 바닥에 붙음 */
+  margin: auto auto 0 auto;
   border-top: 10px solid var(--bread-border-color);
   border-left: 10px solid var(--bread-border-color);
   border-right: 10px solid var(--bread-border-color);

@@ -1,8 +1,16 @@
 <script setup>
 import { useConfigStore } from '../../stores/config'
 import { computed } from 'vue'
-import { getBreadState } from '../../constants/breadState'
+import { BreadState, getBreadState } from '../../constants/breadState'
 const configStore = useConfigStore()
+
+const stateClassMap = {
+  [BreadState.CRISPY]: 'state-crispy',
+  [BreadState.DRY]: 'state-dry',
+  [BreadState.SOGGY]: 'state-soggy',
+  [BreadState.FROZEN]: 'state-frozen',
+  [BreadState.PERFECT]: 'state-perfect',
+}
 
 const props = defineProps({
   title: {
@@ -25,13 +33,14 @@ const displayTemp = computed(() => {
 })
 
 const breadState = computed(() => getBreadState(props.cityInfo))
+const stateClass = computed(() => stateClassMap[breadState.value])
 </script>
 
 <template>
   <div class="result-card-wrap">
     <p class="bread-font-h3 result-title">{{ title }}</p>
     <div class="weather-card">
-      <div class="weather-card-content">
+      <div class="weather-card-content" :class="stateClass">
         <p v-if="cityInfo.countryCode" class="country-code">{{ cityInfo.countryCode }}</p>
         <h3 class="city-row">
           <img
@@ -72,16 +81,18 @@ const breadState = computed(() => getBreadState(props.cityInfo))
 }
 
 .weather-card-content {
+  --card-tint: var(--bread-state-perfect-color);
+
   position: absolute;
   top: -5px;
   left: -5px;
   width: 100%;
   height: 100%;
-  background-color: var(--bread-fill-color);
+  background-color: var(--card-tint);
   background-image: radial-gradient(
       circle,
-      rgba(253, 241, 214, 1) 0%,
-      rgba(253, 241, 214, 0.7) 100%
+      var(--card-tint) 0%,
+      color-mix(in srgb, var(--card-tint) 70%, transparent) 100%
     ),
     url('../../assets/img/img_Bread_Texture.png');
   background-size: cover;
@@ -92,6 +103,26 @@ const breadState = computed(() => getBreadState(props.cityInfo))
   color: var(--bread-border-color);
   box-sizing: border-box;
   padding: 14px 10px;
+}
+
+.state-crispy {
+  --card-tint: var(--bread-state-crispy-color);
+}
+
+.state-dry {
+  --card-tint: var(--bread-state-dry-color);
+}
+
+.state-soggy {
+  --card-tint: var(--bread-state-soggy-color);
+}
+
+.state-frozen {
+  --card-tint: var(--bread-state-frozen-color);
+}
+
+.state-perfect {
+  --card-tint: var(--bread-state-perfect-color);
 }
 
 .country-code {
